@@ -1,0 +1,129 @@
+@import '../../../palette';
+@import '../../../mixins';
+
+.window {
+  position: absolute;
+  left: 1vw;
+  top: 3vw;
+  width: 0.125vw;
+  height: 6vw;
+  transform: translateZ(8.5vw);
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 200%;
+  //   background-color: rgba(darken($black-3, 10), 0.65);
+  //   // filter: blur(0.5vw);
+  // }
+}
+.window-panel {
+  $width-el: 0.125vw;
+  $height-el: 8vw;
+  $depth-el: 2.5vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 0vw;
+  top: 0;
+  width: 0.125vw;
+  height: 8vw;
+
+  &__right {
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(181, 243, 243));
+    
+    border: 0.125vw solid $neon-1;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(
+        transparent 50%,
+        rgba(darken($neon-1, 30), 0.25)
+      );
+
+      // box-shadow: 0.65vw 0.65vw 0.5vw rgba($neon-1, 0.6),
+      //   -0.65vw 0.65vw 0.5vw rgba($neon-1, 0.6),
+      //   -0.65vw -0.65vw 0.5vw rgba($neon-1, 0.6),
+      //   0.65vw -0.65vw 0.5vw rgba($neon-1, 0.6);
+    }
+  }
+  // &__back{ background-color: $white-3; }
+  // &__right{ background-color: $white-3; }
+  // &__left{ background-color: $white-2; }
+  // &__top{ background-color: $white-1; }
+  // &__bottom{ background-color: $white-3; }
+}
+.frame-left,
+.frame-right {
+  $width-el: 0.5vw;
+  $height-el: 8vw;
+  $depth-el: 0.25vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 0;
+  top: -0.5vw;
+  width: 0.5vw;
+  height: 0.5vw;
+
+  &__front {
+    background-color: $black-2;
+  }
+  &__back {
+    background-color: $black-3;
+  }
+  &__right {
+    background-color: $black-3;
+  }
+  &__left {
+    background-color: darken($black-1, 10);
+  }
+  // &__top{ background-color: $white-1; }
+  &__bottom {
+    background-color: $black-3;
+  }
+}
+.frame-left {
+  top: 5vw;
+}
+.frame-top,
+.frame-bottom {
+  $width-el: 0.5vw;
+  $height-el: 0.5vw;
+  $depth-el: 3vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+
+  left: 0;
+  top: 0;
+  width: 0.5vw;
+  height: 6vw;
+  
+  &__front {
+    background-color: darken($black-1, 10);
+  }
+  &__back {
+    background-color: $black-3;
+  }
+  &__right {
+    background-color: $black-3;
+  }
+  &__left {
+    background-color: $black-2;
+  }
+  &__top {
+    background-color: $black-1;
+  }
+  &__bottom {
+    background-color: $black-3;
+  }
+}
+.frame-top {
+  transform: translate3d(0, -0.5vw, 8vw);
+}
+.frame-bottom {
+  transform: translate3d(0, -6.55vw, -0.5vw);
+}
