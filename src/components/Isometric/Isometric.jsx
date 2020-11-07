@@ -24,7 +24,9 @@ const areaToZoom = (key) => {
     case 2:
       return [94, 0, 0, 145, 70, -220, 24]; // monitor and laptop
     case 3:
-      return [105, 0, 45, 145, 70, -220, 24]; // window
+      // perspective(1250px) rotateX(90deg) rotateY(0deg) rotateZ(90deg) translateX(75vw) translateY(210vw) translateZ(-290vw) scale3d(24, 24, 24)
+      return [90, 0, 90, 75, 210, -290, 24];
+      // return [105, 0, 90, 145, 70, -220, 24]; // window
     case 4:
       return [0, 0, 25, 235, 145, -220, 24]; // idcard
       // return [94, 0, 0, 145, 70, -220, 24]; // monitor and laptop
@@ -33,6 +35,8 @@ const areaToZoom = (key) => {
     case 6:
       return [90, 0, 0, -170, 130, -280, 24]; // certificates
     case 7:
+      return [0, 0, -32, 40, 200, -220, 24]; // medium writing
+    case 8:
       return [90, 0, 90, 175, -200, -320, 32]; // photos
     case 0:
     default:
@@ -45,7 +49,7 @@ const Isometric = () => {
   const [keyCount, setKeyCount] = React.useState(0);
   const [props, set] = useSpring(() => ({
     coordinates: [90, 0, 0, 0, 0, -9, 1],
-    config: { mass: 6, tension: 350, friction: 200 },
+    config: { mass: 6, tension: 350, friction: 100 },
   }));
   return (
     <animated.div

@@ -14,44 +14,43 @@
   transform: translateZ(9vw);
 
   &__front {
-    background-color: lighten($neon-1, 15);
+    background-color: black;
     border: 0.125vw solid darken($black-3, 10);
     &::before {
       content: "";
       position: absolute;
       width: 100%;
       height: 100%;
-      box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
-  
-      background-image: url('../../../images/batman.jpg');
-      background-size: cover;
+      // box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
+      //   -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
+      //   0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
+      //   -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
+      // background-color: #383838;
+      background-image: url('../../../images/hi.jpg');
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom;
-      opacity: 0.8;
     }
-    animation: pantalla-tv 0.25s infinite alternate;
+    // animation: pantalla-tv 0.25s infinite alternate;
   }
   &__back {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $black-3;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 13vw;
-      height: 7vw;
-      background-image: radial-gradient(
-        rgba(darken($neon-2, 5), 0.95),
-        rgba(darken($neon-1, 5), 0.95)
-      );
-      filter: blur(1.25vw);
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 13vw;
+    //   height: 7vw;
+    //   background-image: radial-gradient(
+    //     rgba(darken($neon-2, 5), 0.95),
+    //     rgba(darken($neon-1, 5), 0.95)
+    //   );
+    //   filter: blur(1.25vw);
 
-      // animation: luz-tv 0.25s infinite alternate;
-    }
+    //   // animation: luz-tv 0.25s infinite alternate;
+    // }
   }
   &__right {
     background-color: $black-3;
@@ -67,19 +66,19 @@
   }
 }
 
-@keyframes pantalla-tv{
-  from{
-      background-color: lighten($neon-1, 5);
-      box-shadow:
-          .125vw .125vw 0vw rgba($neon-1, 0),
-          -.125vw .125vw 0vw rgba($neon-1, 0),
-          .125vw -.125vw 0vw rgba($neon-1, 0),
-          -.125vw -.125vw 0vw rgba($neon-1, 0)
-      ;
-  }
-}
-@keyframes luz-tv{
-  from{
-      background-image: radial-gradient(rgba(darken($neon-2, 5), .8), rgba(darken($neon-1, 5), .8));
-  }
-}
+// @keyframes pantalla-tv{
+//   from{
+//       background-color: lighten($neon-1, 5);
+//       box-shadow:
+//           .125vw .125vw 0vw rgba($neon-1, 0),
+//           -.125vw .125vw 0vw rgba($neon-1, 0),
+//           .125vw -.125vw 0vw rgba($neon-1, 0),
+//           -.125vw -.125vw 0vw rgba($neon-1, 0)
+//       ;
+//   }
+// }
+// @keyframes luz-tv{
+//   from{
+//       background-image: radial-gradient(rgba(darken($neon-2, 5), .8), rgba(darken($neon-1, 5), .8));
+//   }
+// }

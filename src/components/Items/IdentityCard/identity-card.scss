@@ -2,7 +2,7 @@
 @import "../../../mixins";
 
 .identity-card{
-  $width-el: 0.7vw;
+  $width-el: 0.68vw;
   $height-el: .012vw;
   $depth-el: 0.522vw;
 
@@ -21,16 +21,10 @@
   &__right{ background-color: $white-3; }
   &__left{ background-color: $white-2; }
   &__top{
-      background-image: url('../../../images/id.jpg');
-      background-size: contain;
+      background-image: url('../../../images/idcard.jpg');
+      background-size: cover;
   }
   &__bottom{
       background-color: darken($black-3, 40);
-      // box-shadow:
-      //     .25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     -.25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     -.25vw -.25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     .25vw -.25vw .5vw rgba(darken($neon-2, 20), .75)
-      // ;
   }
 }

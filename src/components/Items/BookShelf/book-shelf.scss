@@ -243,7 +243,7 @@
   }
 
   &:nth-of-type(1) {
-    left: 18vw;
+    left: 18.95vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
     &__front {
@@ -252,52 +252,52 @@
     }
   }
   &:nth-of-type(2) {
-    left: 18.3vw;
-    transform-origin: left;
-    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
-  }
-  &:nth-of-type(3) {
-    left: 18.6vw;
-    transform-origin: left;
-    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
-  }
-  &:nth-of-type(4) {
-    left: 18.9vw;
-    transform-origin: left;
-    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
-  }
-  &:nth-of-type(5) {
     left: 19.2vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
+  &:nth-of-type(3) {
+    left: 19.45vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(4) {
+    left: 19.65vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(5) {
+    left: 19.85vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
   &:nth-of-type(6) {
-    left: 19.5vw;
+    left: 20.05vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
   &:nth-of-type(7) {
-    left: 19.8vw;
+    left: 20.25vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
   &:nth-of-type(8) {
-    left: 20.1vw;
+    left: 20.45vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
   &:nth-of-type(9) {
-    left: 20.4vw;
-    transform-origin: left;
-    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
-  }
-  &:nth-of-type(10) {
     left: 20.7vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
+  &:nth-of-type(10) {
+    left: 20.9vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
   &:nth-of-type(11) {
-    left: 21vw;
+    left: 21.1vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
@@ -307,7 +307,7 @@
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
   &:nth-of-type(13) {
-    left: 21.6vw;
+    left: 21.5vw;
     transform-origin: left;
     transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
   }
@@ -319,6 +319,6 @@
   &:nth-of-type(15) {
     left: 23.75vw;
     transform-origin: left;
-    transform: translateZ(5.375vw) rotateY(-90deg);
+    transform: translateZ(5.36vw) rotateY(-90deg);
   }
 }

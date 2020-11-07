@@ -2,9 +2,9 @@
 @import "../../../mixins";
 
 .tablet{
-  $width-el: 1.8vw;
+  $width-el: 3vw;
   $height-el: .1vw;
-  $depth-el: 1.2vw;
+  $depth-el: 1vw;
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
@@ -16,13 +16,13 @@
   transform: translateZ(7vw) rotateZ(15deg);
 
 
-  &__front{ background-color: darken($white-2, 10); }
-  &__back{ background-color: $white-3; }
-  &__right{ background-color: $white-3; }
-  &__left{ background-color: $white-2; }
+  &__front, &__back, &__right, &__left { background-color: #383838; }
   &__top{
-      background-color: lighten($neon-1, 10);
-      border: .2vw solid rgba($neon-1, .25);
+    background-image: url('../../../images/medium.jpg');
+    background-size: cover;
+    
+    // background-color: lighten($neon-1, 10);
+    // border: .2vw solid rgba($neon-1, .25);
   }
   &__bottom{
       background-color: darken($black-3, 40);
