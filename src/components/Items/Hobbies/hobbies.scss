@@ -1,0 +1,244 @@
+@import "../../../palette";
+@import "../../../mixins";
+
+.plank-top,
+.plank-bottom {
+  $width-el: 1.5vw;
+  $height-el: 0.25vw;
+  $depth-el: 5vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 1.5vw;
+  top: 15vw;
+  width: 1.5vw;
+  height: 10vw;
+
+  transform: translateZ(5vw);
+
+  &__front, &__back, &__right, &__left {
+    background-image: url('../../../images/wood-rotated.png');
+    background-color: #2b0d03;
+    background-size: 32px;
+  }
+  
+  &__top {
+    background-color: #2b0d03;
+    background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+    // background-color: darken($white-1, 10);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(darken($neon-1, 20), 0.75),
+        transparent
+      );
+    }
+  }
+  &__bottom {
+    background-color: $white-3;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(darken($neon-1, 20), 0.75),
+        transparent
+      );
+    }
+  }
+}
+.plank-top {
+  transform: translateZ(9vw);
+}
+
+.photos {
+  position: absolute;
+}
+.photo {
+  $width-el: 0.125vw;
+  $height-el: 1.125vw;
+  $depth-el: 1.125vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  width: 0.125vw;
+  height: 2vw;
+  left: 2vw;
+  top: 11vw;
+
+  &__front {
+    background-image: linear-gradient(
+      to bottom,
+      $white-2,
+      darken($white-2, 10)
+    );
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.4),
+        transparent
+      );
+    }
+  }
+  &__back {
+    background-color: $white-1;
+  }
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darken($white-2, 5);
+    border: 0.15vw solid $black-1;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        $white-2 0.1vw,
+        darken($white-1, 20) 0.2vw
+      );
+    }
+  }
+  &__left {
+    background-color: $white-2;
+  }
+  &__top {
+    background-color: darken($white-1, 10);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__bottom {
+    background-color: darken($white-2, 25);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -100%;
+      width: 400%;
+      height: 100%;
+      background-color: rgba($black-3, 0.75);
+      filter: blur(0.15vw);
+    }
+  }
+  &:nth-of-type(1) {
+    top: 16vw;
+    transform: translateZ(9.26vw) rotateZ(5deg);
+  }
+  &:nth-of-type(2) {
+    top: 20vw;
+    transform: translateZ(9.26vw) rotateZ(-15deg);
+  }
+}
+
+.boxes {
+  position: absolute;
+}
+.box {
+  $width-el: 1vw;
+  $height-el: 0.75vw;
+  $depth-el: 0.75vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  width: 1vw;
+  height: 1.5vw;
+  left: 2vw;
+
+  transform: translateZ(5.35vw);
+
+  &__front {
+    background-image: linear-gradient(
+      to bottom,
+      $white-2,
+      darken($white-2, 10)
+    );
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.4),
+        transparent
+      );
+    }
+  }
+  &__back {
+    background-color: $white-2;
+  }
+  &__right {
+    background-color: darken($white-2, 20);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__left {
+    background-color: $white-2;
+  }
+  &__top {
+    background-color: darken($white-1, 10);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__bottom {
+    background-color: darken($white-2, 25);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -50%;
+      width: 150%;
+      height: 120%;
+      background-color: rgba($black-1, 0.5);
+      filter: blur(0.15vw);
+    }
+  }
+  &:nth-of-type(1) {
+    top: 22vw;
+  }
+  &:nth-of-type(2) {
+    top: 19vw;
+  }
+  &:nth-of-type(3) {
+    top: 16vw;
+  }
+}

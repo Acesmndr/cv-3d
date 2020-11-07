@@ -1,0 +1,324 @@
+@import '../../../palette';
+@import '../../../mixins';
+
+.shelf {
+  $width-el: 8.9vw;
+  $height-el: 0.25vw;
+  $depth-el: 0.74vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 17vw;
+  top: 1vw;
+  width: 9vw;
+  height: 0.5vw;
+
+  transform: translateZ(5vw);
+
+  &__front, &__right, &__left, &__bottom {
+    background-image: url('../../../images/wood-rotated.png');
+    background-color: #2b0d03;
+    background-size: 32px;
+  }
+  &__back {
+    background-color: $white-3;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.25vw;
+      border-radius: 50%;
+      background-image: radial-gradient(
+        rgba(lighten($neon-1, 5), 0.7) 50%,
+        rgba(darken($neon-2, 10), 0.6),
+        transparent
+      );
+      filter: blur(1.25vw);
+    }
+  }
+  // &__right {
+  //   background-color: $white-3;
+  // }
+  // &__left {
+  //   background-color: $white-2;
+  // }
+  &__top {
+    background-image: url('../../../images/wood-rotated.png');
+    background-color: #2b0d03;
+    background-size: 32px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(darken($neon-1, 10), 0.75),
+        transparent
+      );
+    }
+  }
+  &__bottom {
+    background-color: $white-3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(darken($neon-1, 10), 0.75),
+        transparent
+      );
+    }
+  }
+}
+.books {
+  position: absolute;
+}
+.book {
+  $width-el: 0.14vw;
+  $height-el: 1.3vw;
+  $depth-el: 0.7vw;
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  top: 1vw;
+  width: 0.2vw;
+  height: 1vw;
+
+  &__front {
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.book1 {
+      background-image: url('../../../images/book1.jpg');
+    }
+    &.book2 {
+      background-image: url('../../../images/book2.jpg');
+    }
+    &.book3 {
+      background-image: url('../../../images/book4.jpg');
+    }
+    &.book4 {
+      background-image: url('../../../images/book3.jpg');
+    }
+    &.book5 {
+      background-image: url('../../../images/book5.jpg');
+    }
+    &.book6 {
+      background-image: url('../../../images/book6.jpg');
+    }
+    &.book7 {
+      background-image: url('../../../images/book7.jpg');
+    }
+    &.book8 {
+      background-image: url('../../../images/book8.jpg');
+    }
+    &.book9 {
+      background-image: url('../../../images/book9.jpg');
+    }
+    &.book10 {
+      background-image: url('../../../images/book10.jpg');
+    }
+    &.book11 {
+      background-image: url('../../../images/book11.jpg');
+    }
+    &.book12 {
+      background-image: url('../../../images/book12.jpg');
+    }
+    &.book13 {
+      background-image: url('../../../images/book13.jpg');
+    }
+    &.book14 {
+      background-image: url('../../../images/book14.jpg');
+    }
+    &.book15 {
+      background-image: url('../../../images/book15.jpg');
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.4),
+        transparent
+      );
+    }
+  }
+  &__back {
+    background-color: $white-1;
+  }
+  &__right {
+    // background-color: black;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to left,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__left {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to left,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__top {
+    background-color: darken($white-1, 10);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($neon-1, 0.85),
+        rgba($neon-2, 0.35)
+      );
+    }
+  }
+  &__bottom {
+    background-color: lighten($white-3, 14);
+  }
+  &__left,&__right,&__front {
+    &.book1 {
+      background-color: #dab51d;
+    }
+    &.book2 {
+      background-color: black;
+    }
+    &.book3 {
+      background-color: rgb(167, 238, 178);
+    }
+    &.book4 {
+      background-color:grey;
+    }
+    &.book5 {
+      background-color: #114f9a;
+    }
+    &.book6 {
+      background-color: #eb325b;
+    }
+    &.book7 {
+      background-color: #1a1a1a;
+    }
+    &.book8 {
+      background-color: #90485c;
+    }
+    &.book9 {
+      background-color: #cad6e6;
+    }
+    &.book10 {
+      background-color: #da5652;
+    }
+    &.book11 {
+      background-color: #4a6183;
+    }
+    &.book12 {
+      background-color: #bc5e90;
+    }
+    &.book13 {
+      background-color: #51aab8;
+    }
+    &.book14 {
+      background-color: #28496a;
+    }
+    &.book15 {
+      background-color: #353535;
+    }
+  }
+
+  &:nth-of-type(1) {
+    left: 18vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+    &__front {
+      background-image: url('../../../images/book1.jpg');
+      background-size: cover;
+    }
+  }
+  &:nth-of-type(2) {
+    left: 18.3vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(3) {
+    left: 18.6vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(4) {
+    left: 18.9vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(5) {
+    left: 19.2vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(6) {
+    left: 19.5vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(7) {
+    left: 19.8vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(8) {
+    left: 20.1vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(9) {
+    left: 20.4vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(10) {
+    left: 20.7vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(11) {
+    left: 21vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(12) {
+    left: 21.3vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(13) {
+    left: 21.6vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(2deg) rotateZ(10deg);
+  }
+  &:nth-of-type(14) {
+    left: 23.75vw;
+    transform-origin: left;
+    transform: translateZ(5.22vw) rotateY(-90deg);
+  }
+  &:nth-of-type(15) {
+    left: 23.75vw;
+    transform-origin: left;
+    transform: translateZ(5.375vw) rotateY(-90deg);
+  }
+}

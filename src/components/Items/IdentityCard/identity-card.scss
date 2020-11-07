@@ -1,0 +1,36 @@
+@import "../../../palette";
+@import "../../../mixins";
+
+.identity-card{
+  $width-el: 0.7vw;
+  $height-el: .012vw;
+  $depth-el: 0.522vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 4vw;
+  top: 7vw;
+  width: 2vw;
+  height: 2.5vw;
+
+  transform: translateZ(7vw) rotateZ(-25deg);
+
+
+  &__front{ background-color: darken($white-2, 10); }
+  &__back{ background-color: $white-3; }
+  &__right{ background-color: $white-3; }
+  &__left{ background-color: $white-2; }
+  &__top{
+      background-image: url('../../../images/id.jpg');
+      background-size: contain;
+  }
+  &__bottom{
+      background-color: darken($black-3, 40);
+      // box-shadow:
+      //     .25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     -.25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     -.25vw -.25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     .25vw -.25vw .5vw rgba(darken($neon-2, 20), .75)
+      // ;
+  }
+}

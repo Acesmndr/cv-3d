@@ -40,7 +40,7 @@ const Window = () => (
       <div className="frame-bottom__back face"> </div>
       <div className="frame-bottom__right face"> </div>
       <div className="frame-bottom__left face"> </div>
-      <div className="frame-bottom__ face"> </div>
+      <div className="frame-bottom__top face"> </div>
       <div className="frame-bottom__bottom face"> </div>
     </div>
   </div>

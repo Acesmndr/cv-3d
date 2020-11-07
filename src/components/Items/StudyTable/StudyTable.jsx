@@ -43,7 +43,7 @@ const StudyTable = () => (
       <div className="table-foot__top face"> </div>
       <div className="table-foot__bottom face"> </div>
     </div>
-    <div className="mesa-shadow"></div>
+    <div className="table-shadow"></div>
   </div>
 );
 

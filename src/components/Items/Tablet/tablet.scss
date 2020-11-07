@@ -1,0 +1,36 @@
+@import "../../../palette";
+@import "../../../mixins";
+
+.tablet{
+  $width-el: 1.8vw;
+  $height-el: .1vw;
+  $depth-el: 1.2vw;
+
+  @include cube($width-el, $height-el, $depth-el);
+  position: absolute;
+  left: 11vw;
+  top: 4vw;
+  width: 2vw;
+  height: 2.5vw;
+
+  transform: translateZ(7vw) rotateZ(15deg);
+
+
+  &__front{ background-color: darken($white-2, 10); }
+  &__back{ background-color: $white-3; }
+  &__right{ background-color: $white-3; }
+  &__left{ background-color: $white-2; }
+  &__top{
+      background-color: lighten($neon-1, 10);
+      border: .2vw solid rgba($neon-1, .25);
+  }
+  &__bottom{
+      background-color: darken($black-3, 40);
+      // box-shadow:
+      //     .25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     -.25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     -.25vw -.25vw .5vw rgba(darken($neon-2, 20), .75),
+      //     .25vw -.25vw .5vw rgba(darken($neon-2, 20), .75)
+      // ;
+  }
+}

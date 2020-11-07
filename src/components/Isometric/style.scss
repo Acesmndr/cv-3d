@@ -5,38 +5,36 @@
 *,
 *::after,
 *::before {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
   transform-style: preserve-3d;
   -webkit-tap-highlight-color: transparent;
 }
+
 /* Generic */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   // cursor: pointer;
-  background-image: radial-gradient(circle, $bg-1, darken($bg-1, 20));
+  // background-image: radial-gradient(circle, $bg-1, darken($bg-1, 20));
+  background-color: #212121;
 }
 
 .face {
   position: absolute;
 }
 
-/***************/
 .house {
   // position: absolute;
   width: 28vw;
   height: 28vw;
-  // transform: perspective(1250px) rotateX(75deg) rotateZ(40deg) translateZ(-9vw) scale3d(3, 3, 3);
-  // transform: perspective(1250px) rotateX(90deg) rotateZ(0deg) translateZ(-370vw) scale3d(32, 32, 32) translateY(4vw) translateX(6vw);
-  transform: perspective(1250px) rotateX(75deg) rotateZ(45deg) translateZ(-9vw) scale3d(1, 1, 1);
 }
 .h-shadow {
   position: absolute;
@@ -183,12 +181,17 @@ body {
     background-color: $white-1;
   }
   &__top {
-    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#15ffa5, #00ced1);
-    background-color: mediumspringgreen;
-    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
-    background-repeat: repeat;
+    $color-1:#546e7a;
+    $color-2: #455a64;
+    // background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#15ffa5, #00ced1);
+    // background-color: rgb(88, 90, 89);
+    // background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    // background-repeat: repeat;
     // background-image: linear-gradient(to bottom, $black-3, $white-3, $white-2);
-
+    background-color: $color-1;
+    background-image: linear-gradient(45deg, $color-2 25%, transparent 25%, transparent 75%, $color-2 75%, $color-2),
+    linear-gradient(-45deg, $color-2 25%, transparent 25%, transparent 75%, $color-2 75%, $color-2);
+    background-size: 52px 52px;
     .light:nth-of-type(1) {
       position: absolute;
       height: 100%;
@@ -435,7 +438,7 @@ body {
     background-image: linear-gradient(to bottom, $white-3, $white-2);
   }
   &__top {
-    background-color: $black-3;
+    background-color: $white-1;
   }
   &__back {
     background-color: $white-3;
@@ -448,9 +451,9 @@ body {
     //   $white-3 90%,
     //   darken($white-4, 2)
     // );
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(90,83,210,1) 100%);
+    // background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(90,83,210,1) 100%);
     // background: linear-gradient(90deg, rgba(90,83,210,1) 0%, rgba(0,212,255,1) 100%);
-    // background-image: linear-gradient(to bottom, #8d4e0f, #dbaf8f 20%, #b43636);
+    background-image: linear-gradient(to bottom, #8d4e0f, #dbaf8f 20%, #b43636);
     &::before {
       content: "";
       position: absolute;
@@ -594,7 +597,7 @@ body {
         darken($white-2, 5),
         $neon-2
       );
-      border-top: 0.1vw solid $white-4;
+      border-top: 0.01vw solid $white-4;
       border-bottom: 0.1vw solid $white-4;
     }
   }
@@ -609,8 +612,8 @@ body {
       darken($white-4, 10)
     );
   }
-  // &__left{ background-color: $white-2; }
-  // &__top{ background-color: $white-1; }
+  &__left{ background-color: $white-2; }
+  &__top{ background-color: $white-1; }
   &__bottom {
     background-color: $white-3;
   }
@@ -783,828 +786,6 @@ body {
       );
       filter: blur(0.5vw);
     }
-  }
-}
-.repisa-t,
-.repisa-b {
-  $width-el: 1.5vw;
-  $height-el: 0.25vw;
-  $depth-el: 5vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 1.5vw;
-  top: 15vw;
-  width: 1.5vw;
-  height: 10vw;
-
-  transform: translateZ(9vw);
-
-  &__front {
-    background-color: $white-2;
-  }
-  &__back {
-    background-color: $white-1;
-  }
-  &__right {
-    background-color: darken($white-2, 10);
-  }
-  &__left {
-    background-color: $white-1;
-  }
-  &__top {
-    background-color: #2b0d03;
-    background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
-    // background-color: darken($white-1, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgba(darken($neon-1, 20), 0.75),
-        transparent
-      );
-    }
-  }
-  &__bottom {
-    background-color: $white-3;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgba(darken($neon-1, 20), 0.75),
-        transparent
-      );
-    }
-  }
-}
-.repisa-b {
-  transform: translateZ(5vw);
-}
-.tv {
-  $width-el: 0.5vw;
-  $height-el: 6vw;
-  $depth-el: 6vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 1.51vw;
-  top: 8vw;
-  width: 0.5vw;
-  height: 12vw;
-
-  transform: translateZ(8vw);
-
-  &__front {
-    background-color: $black-3;
-  }
-  &__back {
-    background-color: $black-3;
-  }
-  &__right {
-    background-color: lighten($neon-1, 15);
-    border: 0.125vw solid darken($black-3, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
-
-      // background-image: url('https://rawcdn.githack.com/ricardoolivaalonso/Codepen/43200238c3177b02a97423fa6cc23f8bfcc5c105/Room/gif.gif');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
-      opacity: 0.8;
-    }
-    animation: pantalla-tv 0.25s infinite alternate;
-  }
-  &__left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $black-3;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 13vw;
-      height: 7vw;
-      background-image: radial-gradient(
-        rgba(darken($neon-2, 5), 0.95),
-        rgba(darken($neon-1, 5), 0.95)
-      );
-      filter: blur(1.25vw);
-
-      animation: luz-tv 0.25s infinite alternate;
-    }
-  }
-  &__top {
-    background-color: $black-3;
-  }
-  &__bottom {
-    background-color: $black-3;
-  }
-}
-.librero {
-  $width-el: 9vw;
-  $height-el: 0.25vw;
-  $depth-el: 0.75vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 17vw;
-  top: 1vw;
-  width: 9vw;
-  height: 0.5vw;
-
-  transform: translateZ(5vw);
-
-  &__front {
-    background-color: $white-2;
-  }
-  &__back {
-    background-color: $white-3;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 4vw;
-      border-radius: 50%;
-      background-image: radial-gradient(
-        rgba(lighten($neon-1, 5), 0.7) 50%,
-        rgba(darken($neon-2, 10), 0.6),
-        transparent
-      );
-      filter: blur(1.25vw);
-    }
-  }
-  &__right {
-    background-color: $white-3;
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-color: darken($white-1, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(darken($neon-1, 10), 0.75),
-        transparent
-      );
-    }
-  }
-  &__bottom {
-    background-color: $white-3;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(darken($neon-1, 10), 0.75),
-        transparent
-      );
-    }
-  }
-}
-.libros {
-  position: absolute;
-}
-.libro {
-  $width-el: 0.5vw;
-  $height-el: 1.5vw;
-  $depth-el: 0.5vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  top: 1vw;
-  width: 0.5vw;
-  height: 1vw;
-
-  transform: translateZ(7.25vw);
-
-  &__front {
-    background-image: linear-gradient(
-      to bottom,
-      $white-2,
-      darken($white-2, 10)
-    );
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.4),
-        transparent
-      );
-    }
-  }
-  &__back {
-    background-color: $white-1;
-  }
-  &__right {
-    background-color: darken($white-2, 20);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
-      );
-    }
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-color: darken($white-1, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
-      );
-    }
-  }
-  &__bottom {
-    background-color: lighten($white-3, 14);
-  }
-
-  &:nth-of-type(1) {
-    left: 18vw;
-    transform-origin: left;
-    transform: translateZ(5.25vw) rotateZ(-10deg);
-  }
-  &:nth-of-type(2) {
-    left: 19vw;
-    transform: translateZ(5.25vw) rotateZ(2deg);
-  }
-  &:nth-of-type(3) {
-    left: 20vw;
-    transform: translateZ(5.25vw) rotateZ(5deg);
-  }
-  &:nth-of-type(4) {
-    left: 21vw;
-    transform-origin: left;
-    transform: translateZ(5.25vw) rotateZ(10deg);
-  }
-  &:nth-of-type(5) {
-    left: 21.75vw;
-    transform-origin: left;
-    transform: translateZ(5.25vw) rotateZ(10deg);
-  }
-  &:nth-of-type(6) {
-    left: 24.75vw;
-    transform-origin: left;
-    transform: translateZ(5.25vw) rotateY(-90deg);
-  }
-}
-.fotos {
-  position: absolute;
-}
-.foto {
-  $width-el: 0.125vw;
-  $height-el: 1.125vw;
-  $depth-el: 1.125vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  width: 0.125vw;
-  height: 2vw;
-  left: 2vw;
-  top: 11vw;
-
-  transform: translateZ(5.26vw);
-
-  &__front {
-    background-image: linear-gradient(
-      to bottom,
-      $white-2,
-      darken($white-2, 10)
-    );
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.4),
-        transparent
-      );
-    }
-  }
-  &__back {
-    background-color: $white-1;
-  }
-  &__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darken($white-2, 5);
-    border: 0.15vw solid $black-1;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(
-        to bottom,
-        $white-2 0.1vw,
-        darken($white-1, 20) 0.2vw
-      );
-    }
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-color: darken($white-1, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
-      );
-    }
-  }
-  &__bottom {
-    background-color: darken($white-2, 25);
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: -100%;
-      width: 400%;
-      height: 100%;
-      background-color: rgba($black-3, 0.75);
-      filter: blur(0.15vw);
-    }
-  }
-  &:nth-of-type(1) {
-    top: 16vw;
-    transform: translateZ(5.26vw) rotateZ(5deg);
-  }
-  &:nth-of-type(2) {
-    top: 20vw;
-    transform: translateZ(5.26vw) rotateZ(-15deg);
-  }
-}
-
-.cajas {
-  position: absolute;
-}
-.caja {
-  $width-el: 1vw;
-  $height-el: 0.75vw;
-  $depth-el: 0.75vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  width: 1vw;
-  height: 1.5vw;
-  left: 2vw;
-
-  transform: translateZ(9.35vw);
-
-  &__front {
-    background-image: linear-gradient(
-      to bottom,
-      $white-2,
-      darken($white-2, 10)
-    );
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.4),
-        transparent
-      );
-    }
-  }
-  &__back {
-    background-color: $white-2;
-  }
-  &__right {
-    background-color: darken($white-2, 20);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
-      );
-    }
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-color: darken($white-1, 10);
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
-      );
-    }
-  }
-  &__bottom {
-    background-color: darken($white-2, 25);
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: -50%;
-      width: 150%;
-      height: 120%;
-      background-color: rgba($black-1, 0.5);
-      filter: blur(0.15vw);
-    }
-  }
-  &:nth-of-type(1) {
-    top: 22vw;
-  }
-  &:nth-of-type(2) {
-    top: 19vw;
-  }
-  &:nth-of-type(3) {
-    top: 16vw;
-  }
-}
-.cuadro-l,
-.cuadro-r {
-  $width-el: 5vw;
-  $height-el: 7vw;
-  $depth-el: 0.125vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 13vw;
-  top: 1vw;
-  width: 5vw;
-  height: 0.5vw;
-
-  transform: translateZ(10vw);
-
-  &__front {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  &__back {
-    background-color: $white-3;
-    box-shadow: 0.35vw 0.35vw 0.35vw rgba($neon-1, 0.2),
-      -0.35vw 0.35vw 0.35vw rgba($neon-1, 0.2),
-      -0.35vw -0.35vw 0.35vw rgba($neon-1, 0.2),
-      0.35vw -0.35vw 0.35vw rgba($neon-1, 0.2);
-  }
-  &__right {
-    background-color: $white-3;
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-color: $white-2;
-  }
-  &__bottom {
-    background-color: $white-3;
-  }
-}
-.cuadro-l {
-  &__front {
-    background-image: url("https://rawcdn.githack.com/ricardoolivaalonso/Codepen/43200238c3177b02a97423fa6cc23f8bfcc5c105/Room/cuadro-1.jpg");
-    background-color: $cuadro-1;
-    border: 1vw solid $cuadro-1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -1vw;
-      left: -1vw;
-      width: 5vw;
-      height: 7vw;
-      background-origin: padding-box;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-2, 0.15),
-        rgba($neon-2, 0.15)
-      );
-    }
-  }
-}
-.cuadro-r {
-  left: 20vw;
-  &__front {
-    background-image: url("https://rawcdn.githack.com/ricardoolivaalonso/Codepen/43200238c3177b02a97423fa6cc23f8bfcc5c105/Room/cuadro-2.jpg");
-    background-color: $cuadro-2;
-    border: 0.5vw solid $cuadro-2;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -0.5vw;
-      left: -0.5vw;
-      width: 5vw;
-      height: 7vw;
-      background-origin: padding-box;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-2, 0.15),
-        rgba($neon-2, 0.15)
-      );
-    }
-  }
-}
-
-.muro {
-  $width-el: 0.5vw;
-  $height-el: 18vw;
-  $depth-el: 8vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 1vw;
-  top: 6vw;
-  width: 0.5vw;
-  height: 16vw;
-
-  transform: translateZ(0.51vw);
-
-  &__front {
-    background-color: $black-3;
-  }
-  &__back {
-    background-color: $black-3;
-  }
-  &__right {
-    display: flex;
-    justify-content: center;
-    background-image: radial-gradient(circle, $black-1, darken($black-1, 15));
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-2, 0.25),
-        transparent 30%,
-        transparent 70%,
-        rgba($neon-2, 0.15)
-      );
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 5%;
-      width: 90%;
-      height: 25%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(darken($black-3, 5), 0.75),
-        rgba(darken($black-3, 5), 0.95)
-      );
-      filter: blur(0.75vw);
-    }
-  }
-  &__left {
-    background-color: $black-3;
-    box-shadow: 0.5vw 0.5vw 0.6vw rgba($neon-1, 0.3),
-      0.5vw -0.5vw 0.6vw rgba($neon-1, 0.3),
-      -0.5vw 0.5vw 0.6vw rgba($neon-1, 0.3),
-      -0.5vw -0.5vw 0.6vw rgba($neon-1, 0.3);
-  }
-  &__top {
-    background-color: $black-3;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
-      background-image: linear-gradient(
-        to left,
-        rgba($neon-2, 0.5),
-        rgba($neon-1, 0.25)
-      );
-    }
-  }
-  &__bottom {
-    background-color: $black-3;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 5vw;
-      height: 100%;
-      background-image: linear-gradient(to left, $black-3, transparent 50%);
-      transform-origin: right bottom;
-      transform: skewY(-20deg);
-      filter: blur(0.25vw);
-    }
-  }
-}
-
-.table {
-  position: absolute;
-  left: 7vw;
-  top: 9.5vw;
-  width: 10vw;
-  height: 9vw;
-  transform: translateZ(0.5vw);
-}
-.mesa-shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  border-radius: 10%;
-  background-color: #19191973;
-  // background-color: rgba(56 56 56, 45%);;
-  // background-color: rgba($black-3, 0.95);
-  filter: blur(1vw);
-  transform: translateZ(0);
-}
-.mesa {
-  $width-el: 10vw;
-  $height-el: 0.5vw;
-  $depth-el: 4.5vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10vw;
-  height: 9vw;
-
-  transform: translateZ(2vw);
-
-  &__front {
-    background-image: linear-gradient(
-      to right,
-      darken($black-2, 5),
-      darken($black-2, 20)
-    );
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        45deg,
-        rgba($neon-1, 0.125),
-        rgba(lighten($neon-1, 20), 0.25),
-        transparent 55%
-      );
-    }
-  }
-  &__back {
-    background-color: $black-3;
-  }
-  &__right {
-    background-color: darken($black-3, 20);
-  }
-  &__left {
-    background-color: $black-2;
-  }
-  &__top {
-    background-image: linear-gradient(
-      45deg,
-      darken($black-2, 3),
-      darken($black-3, 5)
-    );
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 50%;
-      height: 50%;
-      background-image: linear-gradient(
-        45deg,
-        rgba($neon-1, 0.5),
-        rgba($white-1, 0.125) 50%,
-        transparent 55%
-      );
-      filter: blur(0.5vw);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      left: 2vw;
-      top: 2vw;
-      width: 20%;
-      height: 50%;
-      border-radius: 50%;
-      background-color: rgba($neon-2, 0.079);
-      transform: rotateZ(-40deg);
-      filter: blur(0.75vw);
-    }
-  }
-  &__bottom {
-    background-color: $black-3;
-  }
-}
-.mesa-p {
-  $width-el: 0.25vw;
-  $height-el: 1.75vw;
-  $depth-el: 0.125vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  width: 0.25vw;
-  height: 0.25vw;
-
-  &__front {
-    background-color: $black-3;
-  }
-  &__back {
-    background-color: $black-3;
-  }
-  &__right {
-    background-color: darken($black-3, 20);
-  }
-  &__left {
-    background-color: $black-2;
-  }
-  &__top {
-    background-color: $black-1;
-  }
-  &__bottom {
-    background-color: $black-3;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 600%;
-      height: 200%;
-      top: 0;
-      right: 0;
-      border-radius: 10%;
-      transform: translateZ(-0.1vw);
-      background-color: rgba(darken($black-3, 30), 0.75);
-      filter: blur(0.35vw);
-    }
-  }
-  &:nth-of-type(1) {
-    left: 0.5vw;
-    top: 0.5vw;
-  }
-  &:nth-of-type(2) {
-    right: 0.5vw;
-    top: 0.5vw;
-  }
-  &:nth-of-type(3) {
-    left: 0.5vw;
-    bottom: 0.5vw;
-  }
-  &:nth-of-type(4) {
-    right: 0.5vw;
-    bottom: 0.5vw;
   }
 }
 

@@ -2,33 +2,39 @@
 @import "../../../mixins";
 
 .laptop-base {
-  $width-el: 3vw;
-  $height-el: 0.125vw;
-  $depth-el: 1.25vw;
+  $width-el: 2.92vw;
+  $height-el: 0.075vw;
+  $depth-el: 0.972vw;
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 6vw;
-  top: 4.5vw;
+  top: 4.506vw;
   width: 2vw;
   height: 2.5vw;
 
   transform: translateZ(7vw);
 
   &__front {
-    background-color: darken($white-2, 10);
+    background-color: #d7d7d7;
   }
   &__back {
-    background-color: $white-3;
+    background-color: #d7d7d7;
   }
   &__right {
-    background-color: $white-3;
+    background-color: #d7d7d7;
   }
   &__left {
-    background-color: $white-2;
+    background-color: #d7d7d7;
   }
   &__top {
-    background-color: $white-2;
+    background-image: url('../../../images/keyboard.png');
+    background-size: cover;
+    background-size: contain;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-color: #d7d7d7;
+    // background-color: $white-2;
     // background-color: lighten($neon-1, 10);
     // border: 0.2vw solid rgba($neon-1, 0.25);
     // animation: pantalla-tablet 0.25s infinite;
@@ -43,18 +49,18 @@
 }
 
 .laptop-screen {
-  $width-el: 3vw;
-  $height-el: 2.125vw;
-  $depth-el: 0.05vw;
-
+  $width-el: 2.92vw;
+  $height-el: 2vw;
+  $depth-el: 0.025vw;
+  
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 5.995vw;
-  top: 4.5vw;
+  top: 4.476vw;
   width: 2vw;
   height: 2.5vw;
 
-  transform: translateZ(7.065vw);
+  transform: translateZ(7.25vw) translateY(0.0125vw) rotateX(10deg);
 
   &__front {
     &::before {
@@ -62,12 +68,12 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-        0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
-        -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
+      // box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
+      //   -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
+      //   0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
+      //   -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
   
-      background-image: url('https://rawcdn.githack.com/ricardoolivaalonso/Codepen/43200238c3177b02a97423fa6cc23f8bfcc5c105/Room/gif.gif');
+      background-image: url('../../../images/coding.gif');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom;
@@ -75,11 +81,11 @@
     }
     // border: 0.125vw solid darken($black-3, 10);
     // background-color: lighten($neon-1, 10);
-    border: 0.075vw solid $white-3;
+    border: 0.075vw solid black;
     // animation: pantalla-tablet 0.25s infinite;
   }
   &__back {
-    background-color: $white-3;
+    background-color: #d7d7d7;
   }
   &__right {
     background-color: $white-3;
@@ -95,8 +101,6 @@
     background-color: darken($black-3, 40);
   }
 }
-/**********************/
-/**********************/
 @keyframes pantalla-tablet {
   from {
     background-color: lighten($neon-1, 5);
