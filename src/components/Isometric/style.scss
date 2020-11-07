@@ -326,101 +326,7 @@ body {
     background-color: $white-3;
   }
 }
-.alb {
-  $width-el: 27vw;
-  $height-el: 2vw;
-  $depth-el: 0.5vw;
 
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 27vw;
-  height: 1vw;
-
-  &__front {
-    background-image: linear-gradient(
-      to right,
-      $white-2 40%,
-      darken($white-2, 5)
-    );
-  }
-  &__back {
-    background-color: $white-3;
-  }
-  &__right {
-    background-color: $white-3;
-  }
-  &__left {
-    background-color: $white-1;
-  }
-  &__top {
-    background-image: linear-gradient(
-      to right,
-      $white-1 40%,
-      darken($white-1, 5)
-    );
-  }
-  &__bottom {
-    background-color: $white-3;
-  }
-}
-.arb {
-  $width-el: 1vw;
-  $height-el: 2vw;
-  $depth-el: 14vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 1vw;
-  height: 28vw;
-
-  &__front {
-    background-color: darken($white-2, 5);
-  }
-  &__back {
-    background-color: $white-3;
-  }
-  &__right {
-    background-image: linear-gradient(
-      to right,
-      $white-4 40%,
-      darken($white-3, 20)
-    );
-  }
-  &__left {
-    background-color: $white-2;
-  }
-  &__top {
-    background-image: linear-gradient(
-      to top,
-      $white-1,
-      lighten($white-4, 10) 25%,
-      darken($white-3, 5) 75%,
-      $white-2
-    );
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 30%;
-      top: 0;
-      background-image: linear-gradient(
-        to bottom,
-        transparent,
-        rgba($neon-1, 0.85),
-        transparent
-      );
-    }
-  }
-  &__bottom {
-    background-color: $white-3;
-  }
-}
-/***************/
-/***************/
 .left-wall {
   $width-el: 1vw;
   $height-el: 20vw;
@@ -490,7 +396,7 @@ body {
     background-color: $white-3;
   }
 }
-.blt2 {
+.ceiling-left {
   $width-el: 2vw;
   $height-el: 0.75vw;
   $depth-el: 13.5vw;
@@ -618,7 +524,7 @@ body {
     background-color: $white-3;
   }
 }
-.blb2 {
+.ceiling-right {
   $width-el: 25vw;
   $height-el: 0.75vw;
   $depth-el: 1vw;
@@ -667,142 +573,5 @@ body {
   }
   &__bottom {
     background-color: $white-3;
-  }
-}
-/***************/
-/***************/
-.bocina-l,
-.bocina-r {
-  $width-el: 0.75vw;
-  $height-el: 6vw;
-  $depth-el: 0.75vw;
-
-  @include cube($width-el, $height-el, $depth-el);
-
-  position: absolute;
-  left: 1.5vw;
-  bottom: 5.25vw;
-  width: 0.75vw;
-  height: 1.5vw;
-
-  transform: translateZ(8vw);
-
-  &__right {
-    background-image: radial-gradient(
-      darken($black-3, 10),
-      darken($black-3, 15)
-    );
-  }
-  &__top {
-    background-image: linear-gradient(
-      to left,
-      darken($white-1, 10),
-      $white-2,
-      darken($white-2, 15)
-    );
-  }
-  &__bottom {
-    background-color: $white-3;
-  }
-}
-.bocina-l {
-  &__front {
-    background-image: linear-gradient(
-      to right,
-      $neon-1,
-      darken($white-2, 25) 30%,
-      darken($white-1, 20)
-    );
-  }
-  &__back {
-    background-image: linear-gradient(to right, $white-3, darken($white-3, 10));
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to right,
-        rgba($neon-1, 0.35) 65%,
-        rgba($neon-1, 0.95)
-      );
-    }
-  }
-  &__left {
-    background-color: $white-4;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -10%;
-      left: 20%;
-      width: 120%;
-      height: 120%;
-      background-image: linear-gradient(
-        to left,
-        rgba(darken($neon-2, 40), 0.75),
-        rgba(darken($black-3, 15), 0.75)
-      );
-      filter: blur(0.5vw);
-    }
-  }
-}
-.bocina-r {
-  top: 5.25vw;
-
-  &__front {
-    background-image: linear-gradient(to right, $white-3, darken($white-3, 20));
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        to left,
-        rgba($neon-1, 0.35) 65%,
-        rgba($neon-1, 0.95)
-      );
-    }
-  }
-  &__back {
-    background-image: linear-gradient(
-      to right,
-      darken($white-2, 25),
-      darken($white-1, 20)
-    );
-  }
-  &__left {
-    background-color: $white-4;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -10%;
-      left: -20%;
-      width: 120%;
-      height: 120%;
-      background-image: linear-gradient(
-        to right,
-        rgba(darken($neon-2, 40), 0.75),
-        rgba(darken($black-3, 15), 0.75)
-      );
-      filter: blur(0.5vw);
-    }
-  }
-}
-
-@keyframes pantalla-tv {
-  from {
-    background-color: lighten($neon-1, 5);
-    box-shadow: 0.125vw 0.125vw 0vw rgba($neon-1, 0),
-      -0.125vw 0.125vw 0vw rgba($neon-1, 0),
-      0.125vw -0.125vw 0vw rgba($neon-1, 0),
-      -0.125vw -0.125vw 0vw rgba($neon-1, 0);
-  }
-}
-@keyframes luz-tv {
-  from {
-    background-image: radial-gradient(
-      rgba(darken($neon-2, 5), 0.8),
-      rgba(darken($neon-1, 5), 0.8)
-    );
   }
 }

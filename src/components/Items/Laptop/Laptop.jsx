@@ -1,10 +1,10 @@
 import * as React from 'react';
 import './laptop.scss';
 
-const Laptop = () => (
+const Laptop = ({ currentIndex }) => (
   <div className="laptop">
     <div className="laptop-screen">
-      <div className="laptop-screen__front face"> </div>
+      <div className={`laptop-screen__front face ${currentIndex > 4 && 'dribbble'}`}> </div>
       <div className="laptop-screen__back face"> </div>
       <div className="laptop-screen__right face"> </div>
       <div className="laptop-screen__left face"> </div>

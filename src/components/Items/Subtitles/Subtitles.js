@@ -1,4 +1,6 @@
 import * as React from 'react';
+import './subtitles.scss';
+
 const SUBTITLES = [
   '',
   'My name is Aashish Manandhar',
@@ -11,8 +13,11 @@ const SUBTITLES = [
   'and am glad to have accomplished things',
   '',
 ]
-const Subtitles = (index) => {
-  return <div className="subtitle"></div>;
+const Subtitles = ({ currentIndex }) => {
+  if(!SUBTITLES[currentIndex]) {
+    return null;
+  }
+  return <div className="subtitle">{SUBTITLES[currentIndex]}</div>;
 }
 
 export default Subtitles;

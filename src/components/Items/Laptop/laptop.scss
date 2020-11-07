@@ -78,6 +78,9 @@
       background-repeat: no-repeat;
       background-position: bottom;
     }
+    &.dribbble::before {
+      background-image: url('../../../images/dribbble.jpg');
+    }
     // border: 0.125vw solid darken($black-3, 10);
     // background-color: lighten($neon-1, 10);
     border: 0.075vw solid black;
