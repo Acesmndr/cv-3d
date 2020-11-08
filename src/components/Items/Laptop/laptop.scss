@@ -77,9 +77,11 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom;
+      cursor: default;
     }
     &.dribbble::before {
       background-image: url('../../../images/dribbble.jpg');
+      cursor: pointer;
     }
     // border: 0.125vw solid darken($black-3, 10);
     // background-color: lighten($neon-1, 10);

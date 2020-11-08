@@ -20,17 +20,9 @@
   &__top{
     background-image: url('../../../images/medium.jpg');
     background-size: cover;
-    
-    // background-color: lighten($neon-1, 10);
-    // border: .2vw solid rgba($neon-1, .25);
+    cursor: pointer;
   }
   &__bottom{
       background-color: darken($black-3, 40);
-      // box-shadow:
-      //     .25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     -.25vw .25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     -.25vw -.25vw .5vw rgba(darken($neon-2, 20), .75),
-      //     .25vw -.25vw .5vw rgba(darken($neon-2, 20), .75)
-      // ;
   }
 }

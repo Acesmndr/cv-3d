@@ -22,7 +22,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  cursor: pointer;
   background-image: radial-gradient(white, #2a9aea);
 }
 
@@ -31,7 +30,6 @@ body {
 }
 
 .house {
-  // position: absolute;
   width: 28vw;
   height: 28vw;
 }
@@ -212,6 +210,7 @@ body {
   }
   &__bottom {
     background-image: url('../../images/contact.jpg');
+    cursor: pointer;
     background-size: cover;
   }
 }
