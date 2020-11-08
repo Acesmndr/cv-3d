@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Isometric from './components/Isometric/Isometric';
 
