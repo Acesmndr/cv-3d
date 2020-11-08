@@ -1,7 +1,7 @@
 import * as React from "react";
 import Laptop from "../Items/Laptop/Laptop";
 import Monitor from "../Items/Monitor/Monitor";
-import Hobbies from "../Items/Hobbies/Hobbies";
+import Hobbies from "../Items/Photos/Photos";
 import Chair from "../Items/Chair/Chair";
 import StudyTable from "../Items/StudyTable/StudyTable";
 import Window from "../Items/Window/Window";
@@ -26,7 +26,7 @@ const areaToZoom = (key) => {
     case 3:
       return [65, 0, 5, 162, 150, -220, 24]; // monitor and laptop extra zoom
     case 4:
-      return [94, 0, 0, 145, 70, -220, 24]; // monitor and laptop
+      return [94, 0, 0, 145, 92, -220, 24]; // monitor and laptop
     case 5:
       return [90, 0, 90, 75, 210, -290, 24]; // window
     case 6:
@@ -38,11 +38,13 @@ const areaToZoom = (key) => {
     case 9:
       return [90, 0, 0, 286, 344, -552, 48];
     case 10:
-      return [94, 0, 0, 145, 70, -220, 24]; // monitor and laptop
+      return [65, 0, 5, 162, 150, -220, 24]; // monitor and laptop extra zoom
     case 11:
       return [0, 0, -32, 40, 200, -220, 24]; // medium writing
     case 12:
-      return [90, 0, 90, 175, -200, -320, 32]; // photos
+      return [90, 0, 90, 175, -165, -320, 32]; // photos
+    case 14:
+      return [0, -180, 0, 0, 0, -9, 1]; // contact
     case 0:
     case 13:
     default:
@@ -71,7 +73,7 @@ const Isometric = () => {
             switch (key) {
               case "down":
               case "right":
-                newCount = Math.min(13, keyCount + 1);
+                newCount = Math.min(14, keyCount + 1);
                 setKeyCount(newCount);
                 set({ coordinates: areaToZoom(newCount) });
                 break;
@@ -94,32 +96,14 @@ const Isometric = () => {
 
 const Room = (props) => (
   <div className="house" id="h" {...props}>
-    <div className="h-lights">
-      <div className="h-light"></div>
-      <div className="h-light"></div>
-      <div className="h-light"></div>
-      <div className="h-light"></div>
-      <div className="h-light"></div>
-      <div className="h-light"></div>
-    </div>
     <div className="h-shadow"></div>
     <div className="floor">
       <div className="floor__front face"> </div>
       <div className="floor__back face"> </div>
       <div className="floor__right face"> </div>
       <div className="floor__left face"> </div>
-      <div className="floor__top face">
-        {/* <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div>
-        <div className="light"></div> */}
-      </div>
-      <div className="floor__bottom face"> </div>
+      <div className="floor__top face"> </div>
+      <a href="https://www.linkedin.com/in/acesmndr/" referrerPolicy="no-referrer no-follow"><div className="floor__bottom face"></div></a>
     </div>
     <div className="left-wall">
       <div className="left-wall__front face"> </div>

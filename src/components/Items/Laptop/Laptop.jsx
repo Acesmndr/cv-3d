@@ -4,7 +4,7 @@ import './laptop.scss';
 const Laptop = ({ currentIndex }) => (
   <div className="laptop">
     <div className="laptop-screen">
-      <div className={`laptop-screen__front face ${currentIndex > 4 && 'dribbble'}`}> </div>
+      <a href="https://dribbble.com/acesmndr" referrerPolicy="no-referrer no-follow"><div className={`laptop-screen__front face ${currentIndex > 7 && 'dribbble'}`}> </div></a>
       <div className="laptop-screen__back face"> </div>
       <div className="laptop-screen__right face"> </div>
       <div className="laptop-screen__left face"> </div>

@@ -1,7 +1,7 @@
 import * as React from "react";
-import "./hobbies.scss";
+import "./photos.scss";
 
-const Hobbies = () => (
+const Photos = () => (
   <>
     <div className="plank-top">
       <div className="plank-top__front face"> </div>
@@ -15,7 +15,7 @@ const Hobbies = () => (
       <div className="photo">
         <div className="photo__front face"> </div>
         <div className="photo__back face"> </div>
-        <div className="photo__right face"> </div>
+        <div className="photo__right face producer"> </div>
         <div className="photo__left face"> </div>
         <div className="photo__top face"> </div>
         <div className="photo__bottom face"> </div>
@@ -23,7 +23,7 @@ const Hobbies = () => (
       <div className="photo">
         <div className="photo__front face"> </div>
         <div className="photo__back face"> </div>
-        <div className="photo__right face"> </div>
+        <div className="photo__right face cosplay"> </div>
         <div className="photo__left face"> </div>
         <div className="photo__top face"> </div>
         <div className="photo__bottom face"> </div>
@@ -66,4 +66,4 @@ const Hobbies = () => (
   </>
 );
 
-export default Hobbies;
+export default Photos;

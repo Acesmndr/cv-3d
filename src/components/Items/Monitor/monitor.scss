@@ -30,11 +30,11 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom;
+      filter: drop-shadow(0px 0px 1px #212121);
     }
     &.projects::before {
       background-image: url('../../../images/projects.jpg');
     }
-    // animation: pantalla-tv 0.25s infinite alternate;
   }
   &__back {
     display: flex;
@@ -68,20 +68,3 @@
     background-color: $black-3;
   }
 }
-
-// @keyframes pantalla-tv{
-//   from{
-//       background-color: lighten($neon-1, 5);
-//       box-shadow:
-//           .125vw .125vw 0vw rgba($neon-1, 0),
-//           -.125vw .125vw 0vw rgba($neon-1, 0),
-//           .125vw -.125vw 0vw rgba($neon-1, 0),
-//           -.125vw -.125vw 0vw rgba($neon-1, 0)
-//       ;
-//   }
-// }
-// @keyframes luz-tv{
-//   from{
-//       background-image: radial-gradient(rgba(darken($neon-2, 5), .8), rgba(darken($neon-1, 5), .8));
-//   }
-// }

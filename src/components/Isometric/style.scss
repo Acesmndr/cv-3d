@@ -22,9 +22,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  // cursor: pointer;
-  // background-image: radial-gradient(circle, $bg-1, darken($bg-1, 20));
-  background-color: #212121;
+  cursor: pointer;
+  background-image: radial-gradient(white, #2a9aea);
 }
 
 .face {
@@ -40,122 +39,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 1.5vw -3vw 3vw $bg-2, 1.5vw 0.5vw 1.5vw $bg-2;
+  width: 27vw;
+  height: 27vw;
+  box-shadow: 0.25vw 0.25vw 10.5vw $bg-2, 0.25vw 0.5vw 4.5vw $bg-2;
 }
-.h-lights {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 45vw;
-  height: 45vw;
-}
-.h-light {
-  position: absolute;
-  &:nth-of-type(1) {
-    bottom: 5vw;
-    right: 0;
-    width: 14vw;
-    height: 14vw;
-    border-radius: 50%;
-    background-image: radial-gradient(lighten($bg-1, 2), transparent);
-    filter: blur(1vw);
-  }
-  &:nth-of-type(2) {
-    bottom: 18vw;
-    right: -1vw;
-    width: 2vw;
-    height: 12vw;
-    border-radius: 50%;
-    transform: rotateZ(-50deg);
-    background-image: radial-gradient(
-      rgba($neon-1, 0.45) 50%,
-      rgba($neon-2, 0.45),
-      transparent
-    );
-    box-shadow: -1vw -1vw 2vw 1vw rgba(lighten($neon-1, 10), 0.1);
-    filter: blur(1vw);
-  }
-  &:nth-of-type(3) {
-    bottom: -2vw;
-    right: 17vw;
-    width: 5vw;
-    height: 12vw;
-    border-radius: 50%;
-    transform: rotateZ(-50deg);
 
-    background-image: radial-gradient(
-      rgba($neon-1, 0.5) 50%,
-      rgba($neon-2, 0.5),
-      transparent
-    );
-    filter: blur(2vw);
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 200%;
-      top: -6vw;
-      height: 400%;
-      background-image: linear-gradient(
-        to bottom,
-        rgba($neon-2, 0.1),
-        rgba($neon-1, 0.1),
-        transparent
-      );
-      border-top-left-radius: 10vw;
-      border-top-right-radius: 10vw;
-      filter: blur(1.5vw);
-    }
-    &::before {
-      right: -50%;
-      transform-origin: top right;
-      transform: rotateZ(15deg);
-      box-shadow: -2vw -2vw 0 rgba($neon-1, 0.075);
-    }
-    &::after {
-      left: -50%;
-      transform-origin: top left;
-      transform: rotateZ(-15deg);
-      box-shadow: 2vw -2vw 0 rgba($neon-1, 0.075);
-    }
-  }
-  &:nth-of-type(4) {
-    bottom: 5vw;
-    left: 8vw;
-    width: 28vw;
-    height: 4vw;
-    transform-origin: top left;
-    transform: skewX(58deg);
-    background-image: linear-gradient(
-      to right,
-      rgba($neon-1, 0.075) 10%,
-      transparent 25%,
-      transparent,
-      rgba($bg-2, 0.15)
-    );
-    filter: blur(0.25vw);
-  }
-  &:nth-of-type(6) {
-    bottom: 14vw;
-    right: 2vw;
-    width: 8vw;
-    height: 16vw;
-    transform-origin: bottom left;
-    transform: skewY(49deg);
-    background-image: linear-gradient(
-      to left,
-      rgba(darken(red, 50), 0.1),
-      rgba(darken(red, 50), 0.7)
-    );
-    filter: blur(0.35vw);
-  }
-}
-/***************/
-/***************/
 .floor {
   $width-el: 27vw;
   $height-el: 0.5vw;
@@ -323,7 +211,8 @@ body {
     }
   }
   &__bottom {
-    background-color: $white-3;
+    background-image: url('../../images/contact.jpg');
+    background-size: cover;
   }
 }
 

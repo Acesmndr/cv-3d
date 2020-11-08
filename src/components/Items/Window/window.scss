@@ -74,7 +74,7 @@
 .frame-bottom {
   $width-el: 0.15vw;
   $height-el: 0.5vw;
-  $depth-el: 3.015vw;
+  $depth-el: 3.515vw;
 
   @include cube($width-el, $height-el, $depth-el);
 
@@ -103,8 +103,8 @@
   }
 }
 .frame-top {
-  transform: translate3d(0, -0.49vw, 7.915vw);
+  transform: translate3d(0.05vw, -1vw, 7.915vw);
 }
 .frame-bottom {
-  transform: translate3d(0, -6.54vw, -0.48vw);
+  transform: translate3d(0.05vw, -7.04vw, -0.48vw);
 }

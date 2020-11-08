@@ -1,12 +1,13 @@
 .subtitle {
   position: fixed;
   background: black;
-  padding: 24px;
+  padding: 12px;
   bottom: -15vh;
-  font-size: 1.8rem;
+  font-size: 3vh;
   color: white;
   opacity: 0.75;
-  min-width: 40vw;
+  min-width: 50vw;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  max-width: 80vw;
 }
