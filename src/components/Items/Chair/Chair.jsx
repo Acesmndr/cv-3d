@@ -1,8 +1,11 @@
 import * as React from 'react';
 import './chair.scss';
 
-const Chair = () => (
-  <>
+const Chair = ({ currentIndex }) => {
+  if([2, 3, 4, 5, 9, 10].indexOf(currentIndex) >= 0) {
+    return null;
+  }
+  return (<>
     <div className="chair">
       <div className="seat">
         <div className="seat__front face"> </div>
@@ -61,7 +64,7 @@ const Chair = () => (
         <div className="pedestal-2__bottom face"> </div>
       </div>
     </div>
-</>
-);
+</>);
+};
 
 export default Chair;

@@ -1,0 +1,24 @@
+.keys {
+  font-family: monospace;
+  position: absolute;
+  background: black;
+  color: white;
+  font-size: 4vh;
+  opacity: 0.25;
+  height: 10vh;
+  width: 10vh;
+  text-align: center;
+  line-height: 10vh;
+  &.key-left {
+    transform: translateX(-30vw) translateY(-20vw);
+    left: 0;
+  }
+  &.key-right {
+    transform: translateX(30vw);
+    transform: translateX(30vw) translateY(-20vw);
+    right: 0;
+  }
+  &.hide-key {
+    display: none;
+  }
+}

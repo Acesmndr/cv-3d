@@ -13,6 +13,7 @@ import KeyboardEventHandler from "react-keyboard-event-handler";
 import Tablet from "../Items/Tablet/Tablet";
 import IdentityCard from "../Items/IdentityCard/IdentityCard";
 import Subtitles from "../Items/Subtitles/Subtitles";
+import Keys from "../Items/Keys/Keys";
 
 const calc = (x, y, rx, ry, rz, tx, ty, tz, s) => [rx -(y - window.innerHeight / 2) / 100, ry, rz - (x - window.innerWidth / 2) / 100, tx, ty, tz, s];
 const transform = (rx, ry, rz, tx, ty, tz, s) =>
@@ -51,12 +52,22 @@ const areaToZoom = (key) => {
       return [90, 0, 0, 0, 0, -9, 1]; // zoomed out
   }
 };
-const Isometric = () => {
+const Isometric = ({ isSafari }) => {
   const [keyCount, setKeyCount] = React.useState(0);
   const [props, set] = useSpring(() => ({
     coordinates: [90, 0, 0, 0, 0, -9, 1],
     config: { mass: 6, tension: 350, friction: 100 },
   }));
+  const incrementKeyCount = () => {
+    const newCount = Math.min(14, keyCount + 1);
+    setKeyCount(newCount);
+    set({ coordinates: areaToZoom(newCount) });
+  }
+  const decrementKeyCount = () => {
+    const newCount = Math.max(0, keyCount - 1);
+    setKeyCount(newCount);
+    set({ coordinates: areaToZoom(newCount) });
+  }
   return (
     <>
       <animated.div
@@ -69,19 +80,14 @@ const Isometric = () => {
         <KeyboardEventHandler
           handleKeys={["up", "down", "left", "right"]}
           onKeyEvent={(key, e) => {
-            let newCount = 0;
             switch (key) {
               case "down":
               case "right":
-                newCount = Math.min(14, keyCount + 1);
-                setKeyCount(newCount);
-                set({ coordinates: areaToZoom(newCount) });
+                incrementKeyCount();
                 break;
               case "up":
               case "left":
-                newCount = Math.max(0, keyCount - 1);
-                setKeyCount(newCount);
-                set({ coordinates: areaToZoom(newCount) });
+                decrementKeyCount();
                 break;
               default:
             }
@@ -89,7 +95,8 @@ const Isometric = () => {
         />
         <Room count={keyCount} />
       </animated.div>
-      <Subtitles currentIndex={keyCount} />
+      <Subtitles currentIndex={keyCount} isSafari={isSafari} />
+      <Keys incrementKeyCount={incrementKeyCount} decrementKeyCount={decrementKeyCount} keyCount={keyCount} />
     </>
   );
 };
@@ -147,7 +154,7 @@ const Room = (props) => (
     <Laptop currentIndex={props.count} />
     <Tablet />
     <IdentityCard />
-    <Chair />
+    <Chair currentIndex={props.count} />
   </div>
 );
 

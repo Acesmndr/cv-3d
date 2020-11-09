@@ -18,11 +18,11 @@ const SUBTITLES = [
   'and I\'m always excited to learn something new',
   'I\'d be happy to get to know you.',
 ]
-const Subtitles = ({ currentIndex }) => {
+const Subtitles = ({ currentIndex, isSafari }) => {
   if(!SUBTITLES[currentIndex]) {
     return null;
   }
-  return <div className="subtitle">{SUBTITLES[currentIndex]}</div>;
+  return <div className={`subtitle ${isSafari && 'safari-subtitles'}`}>{SUBTITLES[currentIndex]}</div>;
 }
 
 export default Subtitles;
