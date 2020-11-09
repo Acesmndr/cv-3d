@@ -9,3 +9,17 @@
   font-weight: bold;
   background-color: #e6804d;
 }
+
+.firefox-browser {
+  transform-style: unset;
+  position: absolute;
+  top: -10vh;
+  width: 100vw;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #e6804d;
+  left: 50%;
+  transform: translateX(-50%);
+}
