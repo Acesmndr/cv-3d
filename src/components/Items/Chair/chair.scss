@@ -3,12 +3,12 @@
 
 .chair {
   position: absolute;
-  left: 7vw;
-  top: 9vw;
-  width: 3vw;
-  height: 6vw;
+  left: vres(7);
+  top: vres(9);
+  width: vres(3);
+  height: vres(6);
 
-  transform: translateZ(4.25vw) rotateZ(-5deg);
+  transform: translateZ(vres(4.25)) rotateZ(-5deg);
 
   &::before {
     content: "";
@@ -18,21 +18,21 @@
     width: 160%;
     height: 80%;
     background-color: rgba($black-3, 0.85);
-    filter: blur(0.75vw);
-    transform: translateZ(-3.75vw);
+    filter: blur(vres(0.75));
+    transform: translateZ(vres(-3.75));
   }
 }
 .seat {
-  $width-el: 4vw;
-  $height-el: 1vw;
-  $depth-el: 2vw;
+  $width-el: vres(4);
+  $height-el: vres(1);
+  $depth-el: vres(2);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
-  top: 1vw;
-  width: 6vw;
-  height: 4vw;
+  top: vres(1);
+  width: vres(6);
+  height: vres(4);
 
   &__front {
     background-color: $black-2;
@@ -59,7 +59,7 @@
   }
   &__top {
     background-image: linear-gradient(to right, $black-1, $black-2);
-    border-top: 0.1vw solid rgba($white-2, 0.5);
+    border-top: vres(0.1) solid rgba($white-2, 0.5);
 
     &::before {
       content: "";
@@ -79,18 +79,18 @@
 }
 .left-armrest,
 .right-armrest {
-  $width-el: 0.35vw;
-  $height-el: 2vw;
-  $depth-el: 0.75vw;
+  $width-el: vres(0.35);
+  $height-el: vres(2);
+  $depth-el: vres(0.75);
   transform: rotateX(-5deg);
 
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  top: 2.5vw;
-  transform: translateZ(0.125vw);
-  width: 6vw;
-  height: 1vw;
+  top: vres(2.5);
+  transform: translateZ(vres(0.125));
+  width: vres(6);
+  height: vres(1);
 
   &__front {
     background-image: linear-gradient(to bottom, $black-2, darken($black-2, 5));
@@ -110,7 +110,7 @@
   }
   &__top {
     background-image: linear-gradient(to right, $black-1, darken($black-2, 2));
-    border-bottom: 0.1vw solid rgba($white-2, 0.5);
+    border-bottom: vres(0.1) solid rgba($white-2, 0.5);
 
     &::before {
       content: "";
@@ -129,22 +129,22 @@
   }
 }
 .right-armrest {
-  left: -0.25vw;
+  left: vres(-0.25);
 }
 .left-armrest {
-  left: 4vw;
+  left: vres(4);
 }
 .backrest {
-  $width-el: 4vw;
-  $height-el: 6.5vw;
-  $depth-el: 0.125vw;
+  $width-el: vres(4);
+  $height-el: vres(6.5);
+  $depth-el: vres(0.125);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
-  top: 4.5vw;
-  width: 1vw;
-  height: 1vw;
+  top: vres(4.5);
+  width: vres(1);
+  height: vres(1);
   transform-origin: right;
   transform: rotateX(-15deg);
 
@@ -166,7 +166,7 @@
   }
   &__top {
     background-image: linear-gradient(to right, $black-1, darken($black-2, 2));
-    border-bottom: 0.1vw solid rgba($white-2, 0.5);
+    border-bottom: vres(0.1) solid rgba($white-2, 0.5);
 
     &::before {
       content: "";
@@ -185,17 +185,17 @@
   }
 }
 .stand {
-  $width-el: 0.5vw;
-  $height-el: 4vw;
-  $depth-el: 0.25vw;
+  $width-el: vres(0.5);
+  $height-el: vres(4);
+  $depth-el: vres(0.25);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  width: 1vw;
-  height: 2vw;
-  left: 1.75vw;
-  top: 3vw;
-  transform: translateZ(-4vw);
+  width: vres(1);
+  height: vres(2);
+  left: vres(1.75);
+  top: vres(3);
+  transform: translateZ(vres(-4));
 
   &__front {
     background-color: $black-3;
@@ -222,24 +222,24 @@
       top: 0;
       right: 0;
       border-radius: 10%;
-      transform: translateZ(-0.1vw);
+      transform: translateZ(vres(-0.1));
       background-color: rgba(darken($black-3, 30), 0.75);
-      filter: blur(0.35vw);
+      filter: blur(vres(0.35));
     }
   }
 }
 .pedestal-1, .pedestal-2 {
-  $width-el: 0.55vw;
-  $height-el: 0.35vw;
-  $depth-el: 2.2vw;
+  $width-el: vres(0.55);
+  $height-el: vres(0.35);
+  $depth-el: vres(2.2);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 1.75vw;
-  top: 1vw;
-  width: 2vw;
-  height: 2vw;
-  transform: translateZ(-4vw);
+  left: vres(1.75);
+  top: vres(1);
+  width: vres(2);
+  height: vres(2);
+  transform: translateZ(vres(-4));
 
   &__front {
     background-color: $black-2;
@@ -261,5 +261,5 @@
   }
 }
 .pedestal-2 {
-  transform: translateZ(-4vw) rotateZ(90deg) translateX(2vw) translateY(-0.5vw);
+  transform: translateZ(vres(-4)) rotateZ(90deg) translateX(vres(2)) translateY(vres(-0.5));
 }

@@ -3,11 +3,11 @@
 
 .study-table {
   position: absolute;
-  left: 1vw;
-  top: 1vw;
-  width: 14vw;
-  height: 9vw;
-  transform: translateZ(0.5vw);
+  left: vres(1);
+  top: vres(1);
+  width: vres(14);
+  height: vres(9);
+  transform: translateZ(vres(0.5));
 }
 .table-shadow {
   position: absolute;
@@ -16,22 +16,22 @@
 
   border-radius: 10%;
   background-color: #83848373;
-  filter: blur(1vw);
+  filter: blur(vres(1));
   transform: translateZ(0);
 }
 .study {
-  $width-el: 14vw;
-  $height-el: 0.5vw;
-  $depth-el: 4.5vw;
+  $width-el: vres(14);
+  $height-el: vres(0.5);
+  $depth-el: vres(4.5);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
   top: 0;
-  width: 12vw;
-  height: 7vw;
+  width: vres(14);
+  height: vres(7);
 
-  transform: translateZ(6vw);
+  transform: translateZ(vres(6));
 
   &__front {
     background-image: linear-gradient(
@@ -44,12 +44,12 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(
-        45deg,
-        rgba($neon-1, 0.125),
-        rgba(lighten($neon-1, 20), 0.25),
-        transparent 55%
-      );
+      // background-image: linear-gradient(
+      //   45deg,
+      //   rgba($neon-1, 0.125),
+      //   rgba(lighten($neon-1, 20), 0.25),
+      //   transparent 55%
+      // );
     }
   }
   &__back {
@@ -64,13 +64,7 @@
   &__top {
     background-color: #2b0d03;
     background-image: url('../../../images/wood-rotated.png');
-    background-size: 32px;
-    // background-image: linear-gradient(45deg, #20170b, #714f12);
-    // background-image: linear-gradient(
-    //   45deg,
-    //   darken($black-2, 3),
-    //   darken($black-3, 5)
-    // );
+    background-size: vw(2);
     overflow: hidden;
 
     &::before {
@@ -85,19 +79,19 @@
         rgba($white-1, 0.125) 50%,
         transparent 55%
       );
-      filter: blur(0.5vw);
+      filter: blur(vres(0.5));
     }
     &::after {
       content: "";
       position: absolute;
-      left: 2vw;
-      top: 2vw;
+      left: vres(2);
+      top: vres(2);
       width: 20%;
       height: 50%;
       border-radius: 50%;
       background-color: rgba($neon-2, 0.079);
       transform: rotateZ(-40deg);
-      filter: blur(0.75vw);
+      filter: blur(vres(0.75));
     }
   }
   &__bottom {
@@ -105,14 +99,14 @@
   }
 }
 .table-foot {
-  $width-el: 0.25vw;
-  $height-el: 6vw;
-  $depth-el: 0.125vw;
+  $width-el: vres(0.25);
+  $height-el: vres(6);
+  $depth-el: vres(0.125);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  width: 0.25vw;
-  height: 0.25vw;
+  width: vres(0.25);
+  height: vres(0.25);
 
   &__front {
     background-color: $black-3;
@@ -139,25 +133,25 @@
       top: 0;
       right: 0;
       border-radius: 10%;
-      transform: translateZ(-0.1vw);
+      transform: translateZ(vres(-0.1));
       background-color: rgba(darken($black-3, 30), 0.75);
-      filter: blur(0.35vw);
+      filter: blur(vres(0.35));
     }
   }
   &:nth-of-type(1) {
-    left: 0.5vw;
-    top: 0.5vw;
+    left: vres(0.5);
+    top: vres(0.5);
   }
   &:nth-of-type(2) {
-    right: 0.5vw;
-    top: 0.5vw;
+    right: vres(0.5);
+    top: vres(0.5);
   }
   &:nth-of-type(3) {
-    left: 0.5vw;
-    bottom: 0.5vw;
+    left: vres(0.5);
+    bottom: vres(0.5);
   }
   &:nth-of-type(4) {
-    right: 0.5vw;
-    bottom: 0.5vw;
+    right: vres(0.5);
+    bottom: vres(0.5);
   }
 }

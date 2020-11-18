@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 100vw;
+  width: vres(10);
   height: 100vh;
   overflow: hidden;
   background-image: radial-gradient(white, #2a9aea);
@@ -30,30 +30,38 @@ body {
   position: absolute;
 }
 
+.house-div {
+
+}
+
 .house {
-  width: 28vw;
-  height: 28vw;
+  // width: vres(28);
+  // height: vres(28);
+  // width: vres(2);
+  // height: vres(2);
+  height: 20vw;
+  width: 20vw;
 }
 .h-shadow {
   position: absolute;
   top: 0;
   left: 0;
-  width: 27vw;
-  height: 27vw;
-  box-shadow: 0.25vw 0.25vw 10.5vw $bg-2, 0.25vw 0.5vw 4.5vw $bg-2;
+  width: vres(27);
+  height: vres(27);
+  box-shadow: vres(0.25) vres(0.25) vres(10.5) $bg-2, vres(0.25) vres(0.5) vres(4.5) $bg-2;
 }
 
 .floor {
-  $width-el: 27vw;
-  $height-el: 0.5vw;
-  $depth-el: 13.5vw;
+  $width-el: vres(27);
+  $height-el: vres(0.5);
+  $depth-el: vres(13.5);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
   top: 0;
-  width: 27vw;
-  height: 27vw;
+  width: vres(27);
+  height: vres(27);
 
   &__front {
     background-color: $white-2;
@@ -92,72 +100,72 @@ body {
     }
     .light:nth-of-type(2) {
       position: absolute;
-      left: 4vw;
+      left: vres(4);
       height: 100%;
-      width: 6vw;
+      width: vres(6);
       background-image: linear-gradient(
         to bottom,
         transparent 20%,
         rgba($neon-2, 0.75),
         rgba($neon-1, 0.25) 80%
       );
-      filter: blur(0.1vw);
+      filter: blur(vres(0.1));
     }
     .light:nth-of-type(3) {
       position: absolute;
-      bottom: 10vw;
-      left: 5vw;
-      width: 6vw;
-      height: 3vw;
+      bottom: vres(10);
+      left: vres(5);
+      width: vres(6);
+      height: vres(3);
       border-radius: 50%;
       transform: rotateZ(42deg);
       background-image: radial-gradient(
         rgba(lighten($neon-1, 10), 0.75) 50%,
         rgba(darken($neon-2, 10), 0.75)
       );
-      filter: blur(0.55vw);
+      filter: blur(vres(0.55));
     }
     .light:nth-of-type(4) {
       position: absolute;
-      bottom: 7vw;
-      left: 4vw;
-      width: 8.5vw;
-      height: 2vw;
+      bottom: vres(7);
+      left: vres(4);
+      width: vres(8.5);
+      height: vres(2);
       border-radius: 50%;
       transform: rotateZ(40deg);
       background-image: radial-gradient(
         rgba(lighten($neon-1, 10), 0.75) 50%,
         rgba(darken($neon-2, 10), 0.75)
       );
-      filter: blur(0.55vw);
+      filter: blur(vres(0.55));
     }
     .light:nth-of-type(5) {
       position: absolute;
-      bottom: 3.5vw;
-      left: 4.5vw;
-      width: 6vw;
-      height: 2vw;
+      bottom: vres(3.5);
+      left: vres(4.5);
+      width: vres(6);
+      height: vres(2);
       border-radius: 50%;
       transform: rotateZ(40deg);
       background-image: radial-gradient(
         rgba(lighten($neon-1, 12), 0.75) 50%,
         rgba(darken($neon-2, 10), 0.75)
       );
-      filter: blur(0.75vw);
+      filter: blur(vres(0.75));
     }
     .light:nth-of-type(6) {
       position: absolute;
-      bottom: 3vw;
-      left: 0.5vw;
-      width: 4vw;
-      height: 2vw;
+      bottom: vres(3);
+      left: vres(0.5);
+      width: vres(4);
+      height: vres(2);
       border-radius: 50%;
       transform: rotateZ(40deg);
       background-image: radial-gradient(
         rgba(lighten($neon-1, 12), 0.75) 50%,
         rgba(darken($neon-2, 10), 0.75)
       );
-      filter: blur(0.35vw);
+      filter: blur(vres(0.35));
     }
     .light:nth-of-type(7) {
       position: absolute;
@@ -196,17 +204,17 @@ body {
     }
     .light:nth-of-type(8) {
       position: absolute;
-      bottom: 5vw;
-      left: 10vw;
-      width: 6vw;
-      height: 4vw;
+      bottom: vres(5);
+      left: vres(10);
+      width: vres(6);
+      height: vres(4);
       border-radius: 50%;
       transform: rotateZ(40deg);
       background-image: radial-gradient(
         rgba(lighten($white-1, 12), 0.1) 50%,
         rgba(darken($white-2, 10), 0.1)
       );
-      filter: blur(0.8vw);
+      filter: blur(vres(0.8));
     }
   }
   &__bottom {
@@ -217,17 +225,17 @@ body {
 }
 
 .left-wall {
-  $width-el: 1vw;
-  $height-el: 20vw;
-  $depth-el: 13.5vw;
+  $width-el: vres(1);
+  $height-el: vres(20);
+  $depth-el: vres(13.5);
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
   top: 0;
-  width: 1vw;
-  height: 27vw;
+  width: vres(1);
+  height: vres(27);
 
-  transform: translateZ(0.5vw);
+  transform: translateZ(vres(0.5));
 
   &__front {
     background-image: linear-gradient(to bottom, $white-3, $white-2);
@@ -254,14 +262,14 @@ body {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 0.75vw;
+      height: vres(0.75);
       background-image: linear-gradient(
         to bottom,
         darken($white-2, 5),
         $neon-2
       );
-      border-top: 0.1vw solid $white-4;
-      border-bottom: 0.1vw solid $white-4;
+      border-top: vres(0.1) solid $white-4;
+      border-bottom: vres(0.1) solid $white-4;
     }
     &::after {
       content: "";
@@ -286,17 +294,17 @@ body {
   }
 }
 .ceiling-left {
-  $width-el: 2vw;
-  $height-el: 0.75vw;
-  $depth-el: 13.5vw;
+  $width-el: vres(2);
+  $height-el: vres(0.75);
+  $depth-el: vres(13.5);
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
   left: 0;
   top: 0;
-  width: 2vw;
-  height: 27vw;
+  width: vres(2);
+  height: vres(27);
 
-  transform: translateZ(20.5vw);
+  transform: translateZ(vres(20.5));
 
   &__front {
     background-color: $white-3;
@@ -318,7 +326,7 @@ body {
       width: 100%;
       height: 100%;
       bottom: 0;
-      border-bottom: 0.1vw solid rgba($white-1, 0.75);
+      border-bottom: vres(0.1) solid rgba($white-1, 0.75);
       background-image: linear-gradient(
         to top,
         rgba($neon-1, 0.35),
@@ -337,18 +345,18 @@ body {
   }
 }
 .right-wall {
-  $width-el: 26vw;
-  $height-el: 20vw;
-  $depth-el: 0.5vw;
+  $width-el: vres(26);
+  $height-el: vres(20);
+  $depth-el: vres(0.5);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 1vw;
+  left: vres(1);
   top: 0;
-  width: 26vw;
-  height: 1vw;
+  width: vres(26);
+  height: vres(1);
 
-  transform: translateZ(0.5vw);
+  transform: translateZ(vres(0.5));
 
   &__front {
     // background-image: linear-gradient(
@@ -386,14 +394,14 @@ body {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 0.75vw;
+      height: vres(0.75);
       background-image: linear-gradient(
         to bottom,
         darken($white-2, 5),
         $neon-2
       );
-      border-top: 0.01vw solid $white-4;
-      border-bottom: 0.1vw solid $white-4;
+      border-top: vres(0.01) solid $white-4;
+      border-bottom: vres(0.1) solid $white-4;
     }
   }
   &__back {
@@ -414,18 +422,18 @@ body {
   }
 }
 .ceiling-right {
-  $width-el: 25vw;
-  $height-el: 0.75vw;
-  $depth-el: 1vw;
+  $width-el: vres(25);
+  $height-el: vres(0.75);
+  $depth-el: vres(1);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 2vw;
+  left: vres(2);
   top: 0;
-  width: 25vw;
-  height: 1vw;
+  width: vres(25);
+  height: vres(1);
 
-  transform: translateZ(20.5vw);
+  transform: translateZ(vres(20.5));
 
   &__front {
     background-image: linear-gradient(
@@ -440,7 +448,7 @@ body {
       width: 100%;
       height: 100%;
       bottom: 0;
-      border-bottom: 0.1vw solid rgba($white-1, 0.75);
+      border-bottom: vres(0.1) solid rgba($white-1, 0.75);
       background-image: linear-gradient(
         to top,
         rgba($neon-2, 0.25),

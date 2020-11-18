@@ -1,3 +1,5 @@
+@import '../../../mixins';
+
 .subtitle {
   position: fixed;
   background: black;
@@ -5,12 +7,14 @@
   font-size: 3vh;
   color: white;
   opacity: 0.75;
-  min-width: 50vw;
-  left: 50%;
-  transform: translateX(-50%);
+  min-width: vres(12.5);
+  left: 75%;
+  transform: translateZ(vres(25));
   text-align: center;
   border-radius: 2px;
   bottom: -15vh;
+  margin-left: auto;
+  margin-right: auto;
   &.safari-subtitles {
     bottom: 10vh;
   }

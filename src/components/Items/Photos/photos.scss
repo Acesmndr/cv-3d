@@ -3,18 +3,18 @@
 
 .plank-top,
 .plank-bottom {
-  $width-el: 1.5vw;
-  $height-el: 0.25vw;
-  $depth-el: 5vw;
+  $width-el: vres(1.5);
+  $height-el: vres(0.25);
+  $depth-el: vres(5);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 1vw;
-  top: 15vw;
-  width: 1.5vw;
-  height: 10vw;
+  left: vres(1);
+  top: vres(15);
+  width: vres(1.5);
+  height: vres(10);
 
-  transform: translateZ(5vw);
+  transform: translateZ(vres(5));
 
   &__front, &__back, &__right, &__left {
     background-image: url('../../../images/wood-rotated.png');
@@ -54,23 +54,23 @@
   }
 }
 .plank-top {
-  transform: translateZ(9vw);
+  transform: translateZ(vres(9));
 }
 
 .photos {
   position: absolute;
 }
 .photo {
-  $width-el: 0.125vw;
-  $height-el: 1.11vw;
-  $depth-el: 1.11vw;
+  $width-el: vres(0.125);
+  $height-el: vres(1.11);
+  $depth-el: vres(1.11);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  width: 0.125vw;
-  height: 2vw;
-  left: 2vw;
-  top: 11vw;
+  width: vres(0.125);
+  height: vres(2);
+  left: vres(2);
+  top: vres(11);
 
   &__front, &__back, &__left, &__top, &__bottom {
     background-color: black;
@@ -80,7 +80,7 @@
     justify-content: center;
     align-items: center;
     background-color: darken($white-2, 5);
-    border: 0.15vw solid #212121;
+    border: vres(0.15) solid #212121;
     &::before {
       content: "";
       position: absolute;
@@ -89,7 +89,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position-x: center;
-      border: 0.1vw solid white;
+      border: vres(0.1) solid white;
     }
     &.cosplay::before {
       background-image: url('../../../images/cosplay.jpg');
@@ -99,12 +99,12 @@
     }
   }
   &:nth-of-type(1) {
-    top: 16vw;
-    transform: translateZ(9.26vw) rotateZ(5deg);
+    top: vres(16);
+    transform: translateZ(vres(9.26)) rotateZ(5deg);
   }
   &:nth-of-type(2) {
-    top: 20vw;
-    transform: translateZ(9.26vw) rotateZ(-15deg);
+    top: vres(20);
+    transform: translateZ(vres(9.26)) rotateZ(-15deg);
   }
 }
 
@@ -112,17 +112,17 @@
   position: absolute;
 }
 .box {
-  $width-el: 1vw;
-  $height-el: 0.75vw;
-  $depth-el: 0.75vw;
+  $width-el: vres(1);
+  $height-el: vres(0.75);
+  $depth-el: vres(0.75);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  width: 1vw;
-  height: 1.5vw;
-  left: 2vw;
+  width: vres(1);
+  height: vres(1.5);
+  left: vres(2);
 
-  transform: translateZ(5.35vw);
+  transform: translateZ(vres(5.35));
 
   &__front {
     background-image: linear-gradient(
@@ -186,16 +186,16 @@
       width: 150%;
       height: 120%;
       background-color: rgba($black-1, 0.5);
-      filter: blur(0.15vw);
+      filter: blur(vres(0.15));
     }
   }
   &:nth-of-type(1) {
-    top: 22vw;
+    top: vres(22);
   }
   &:nth-of-type(2) {
-    top: 19vw;
+    top: vres(19);
   }
   &:nth-of-type(3) {
-    top: 16vw;
+    top: vres(16);
   }
 }

@@ -1,3 +1,7 @@
+@function vres($size) {
+  @return $size * 4vw;
+}
+
 @mixin cube($width, $height, $depth) {
   &__front{ @include cube-front($width, $height, $depth); }
   &__back{ @include cube-back($width, $height, $depth); }

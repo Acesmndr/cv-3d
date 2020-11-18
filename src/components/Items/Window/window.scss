@@ -3,23 +3,23 @@
 
 .window {
   position: absolute;
-  left: 1vw;
-  top: 3vw;
-  width: 0.125vw;
-  height: 6vw;
-  transform: translateZ(8.5vw);
+  left: vres(1);
+  top: vres(3);
+  width: vres(0.125);
+  height: vres(6);
+  transform: translateZ(vres(8.5));
 }
 .window-panel {
-  $width-el: 0.125vw;
-  $height-el: 8vw;
-  $depth-el: 2.5vw;
+  $width-el: vres(0.125);
+  $height-el: vres(8);
+  $depth-el: vres(2.5);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 0vw;
+  left: vres(-0.1);
   top: 0;
-  width: 0.125vw;
-  height: 8vw;
+  width: vres(0.125);
+  height: vres(8);
 
   &__right {
     background-image: url('../../../images/kathmandu.jpg');
@@ -37,16 +37,16 @@
 }
 .frame-left,
 .frame-right {
-  $width-el: 0.1vw;
-  $height-el: 8vw;
-  $depth-el: 0.25vw;
+  $width-el: vres(0.1);
+  $height-el: vres(8);
+  $depth-el: vres(0.25);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 0.01vw;
-  top: -0.5vw;
-  width: 0.5vw;
-  height: 0.5vw;
+  left: vres(0.01);
+  top: vres(-0.5);
+  width: vres(0.5);
+  height: vres(0.5);
 
   &__front {
     background-color: $black-2;
@@ -68,20 +68,20 @@
   }
 }
 .frame-left {
-  top: 4.955vw;
+  top: vres(4.955);
 }
 .frame-top,
 .frame-bottom {
-  $width-el: 0.15vw;
-  $height-el: 0.5vw;
-  $depth-el: 3.515vw;
+  $width-el: vres(0.15);
+  $height-el: vres(0.5);
+  $depth-el: vres(3.515);
 
   @include cube($width-el, $height-el, $depth-el);
-
-  left: 0.1vw;
-  top: 0.1vw;
-  width: 0.5vw;
-  height: 6vw;
+  position: absolute;
+  left: vres(0.01);
+  top: vres(-1);
+  width: vres(0.5);
+  height: vres(6);
   
   &__front {
     background-color: darken($black-1, 10);
@@ -96,15 +96,14 @@
     background-color: $black-2;
   }
   &__top {
-    background-color: $black-1;
+    background-color: darken($black-1, 10);
   }
   &__bottom {
     background-color: $black-3;
   }
 }
 .frame-top {
-  transform: translate3d(0.05vw, -1vw, 7.915vw);
+  transform: translateZ(32vw);
 }
 .frame-bottom {
-  transform: translate3d(0.05vw, -7.04vw, -0.48vw);
 }
