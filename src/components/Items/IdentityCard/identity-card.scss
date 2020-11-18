@@ -2,18 +2,18 @@
 @import "../../../mixins";
 
 .identity-card{
-  $width-el: 0.68vw;
-  $height-el: .012vw;
-  $depth-el: 0.522vw;
+  $width-el: vres(0.68);
+  $height-el: vres(.012);
+  $depth-el: vres(0.522);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 4vw;
-  top: 7vw;
-  width: 2vw;
-  height: 2.5vw;
+  left: vres(4);
+  top: vres(7);
+  width: vres(2);
+  height: vres(2.5);
 
-  transform: translateZ(7vw) rotateZ(-25deg);
+  transform: translateZ(vres(7.05)) rotateZ(-25deg);
 
 
   &__front{ background-color: darken($white-2, 10); }

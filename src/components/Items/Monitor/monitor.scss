@@ -1,30 +1,30 @@
 @import '../../../palette';
 @import '../../../mixins';
 .monitor {
-  $width-el: 8vw;
-  $height-el: 5vw;
-  $depth-el: 0.25vw;
+  $width-el: vres(8);
+  $height-el: vres(5);
+  $depth-el: vres(0.25);
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 4vw;
-  top: 1.5vw;
-  width: 8vw;
-  height: 0.5vw;
+  left: vres(4);
+  top: vres(1.5);
+  width: vres(8);
+  height: vres(0.5);
 
-  transform: translateZ(9vw);
+  transform: translateZ(vres(9));
 
   &__front {
     background-color: black;
-    border: 0.125vw solid darken($black-3, 10);
+    border: vres(0.125) solid darken($black-3, 10);
     &::before {
       content: "";
       position: absolute;
       width: 100%;
       height: 100%;
-      // box-shadow: 0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-      //   -0.125vw 0.125vw 1vw rgba($neon-1, 0.5),
-      //   0.125vw -0.125vw 1vw rgba($neon-1, 0.5),
-      //   -0.125vw -0.125vw 1vw rgba($neon-1, 0.5);
+      // box-shadow: vres(0.125) vres(0.125) vres(1) rgba($neon-1, 0.5),
+      //   vres(-0.125) vres(0.125) vres(1) rgba($neon-1, 0.5),
+      //   vres(0.125) vres(-0.125) vres(1) rgba($neon-1, 0.5),
+      //   vres(-0.125) vres(-0.125) vres(1) rgba($neon-1, 0.5);
       // background-color: #383838;
       background-image: url('../../../images/hi.jpg');
       background-size: contain;
@@ -44,13 +44,13 @@
     // &::before {
     //   content: "";
     //   position: absolute;
-    //   width: 13vw;
-    //   height: 7vw;
+    //   width: vres(13);
+    //   height: vres(7);
     //   background-image: radial-gradient(
     //     rgba(darken($neon-2, 5), 0.95),
     //     rgba(darken($neon-1, 5), 0.95)
     //   );
-    //   filter: blur(1.25vw);
+    //   filter: blur(vres(1.25));
 
     //   // animation: luz-tv 0.25s infinite alternate;
     // }

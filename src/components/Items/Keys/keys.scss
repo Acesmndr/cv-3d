@@ -1,3 +1,5 @@
+@import '../../../mixins';
+
 .keys {
   font-family: monospace;
   position: absolute;
@@ -10,12 +12,11 @@
   text-align: center;
   line-height: 10vh;
   &.key-left {
-    transform: translateX(-30vw) translateY(-20vw);
+    transform: translateX(vres(-1.25)) translateY(vres(-2.5)) translateZ(vres(25));
     left: 0;
   }
   &.key-right {
-    transform: translateX(30vw);
-    transform: translateX(30vw) translateY(-20vw);
+    transform: translateX(vres(16.25)) translateY(vres(-2.5)) translateZ(vres(25));
     right: 0;
   }
   &.hide-key {

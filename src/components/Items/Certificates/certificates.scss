@@ -5,18 +5,18 @@
 .certificate-2,
 .certificate-3
  {
-  $width-el: 2.99vw;
-  $height-el: 4vw;
-  $depth-el: 0.1vw;
+  $width-el: vres(2.99);
+  $height-el: vres(4);
+  $depth-el: vres(0.1);
 
   @include cube($width-el, $height-el, $depth-el);
   position: absolute;
-  left: 16vw;
-  top: 0vw;
-  width: 4vw;
-  height: 0.8vw;
+  left: vres(16);
+  top: vres(0);
+  width: vres(4);
+  height: vres(0.8);
 
-  transform: translateZ(10vw) translateY(2vw);
+  transform: translateZ(vres(10)) translateY(vres(2));
 
   &__front {
     background-repeat: no-repeat;
@@ -25,10 +25,10 @@
   }
   &__back {
     background-color: $black-1;
-    // box-shadow: 0.35vw 0.35vw 0.35vw rgba($neon-1, 0.2),
-    //   -0.35vw 0.35vw 0.35vw rgba($neon-1, 0.2),
-    //   -0.35vw -0.35vw 0.35vw rgba($neon-1, 0.2),
-    //   0.35vw -0.35vw 0.35vw rgba($neon-1, 0.2);
+    // box-shadow: vres(0.35) vres(0.35) vres(0.35) rgba($neon-1, 0.2),
+    //   vres(-0.35) vres(0.35) vres(0.35) rgba($neon-1, 0.2),
+    //   vres(-0.35) vres(-0.35) vres(0.35) rgba($neon-1, 0.2),
+    //   vres(0.35) vres(-0.35) vres(0.35) rgba($neon-1, 0.2);
   }
   &__right {
     background-color: $black-1;
@@ -50,10 +50,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0vw;
-      left: 0vw;
-      width: 2.99vw;
-      height: 4vw;
+      top: vres(0);
+      left: vres(0);
+      width: vres(2.99);
+      height: vres(4);
       background-origin: padding-box;
       background-image: linear-gradient(
         to bottom,
@@ -64,19 +64,19 @@
   }
 }
 .certificate-2 {
-  left: 19.5vw;
+  left: vres(19.5);
   &__front {
     background-size: contain;
     background-image: url('../../../images/ideathon.jpg');
     background-color: black;
-    // border: 0.5vw solid $cuadro-2;
+    // border: vres(0.5) solid $cuadro-2;
     &::before {
       content: "";
       position: absolute;
-      top: 0vw;
-      left: 0vw;
-      width: 2.99vw;
-      height: 4vw;
+      top: vres(0);
+      left: vres(0);
+      width: vres(2.99);
+      height: vres(4);
       background-origin: padding-box;
       background-image: linear-gradient(
         to bottom,
@@ -87,17 +87,17 @@
   }
 }
 .certificate-3 {
-  left: 23vw;
+  left: vres(23);
   &__front {
     background-image: url('../../../images/interfaith.jpg');
     background-color: black;
     &::before {
       content: "";
       position: absolute;
-      top: 0vw;
-      left: 0vw;
-      width: 2.99vw;
-      height: 4vw;
+      top: vres(0);
+      left: vres(0);
+      width: vres(2.99);
+      height: vres(4);
       background-origin: padding-box;
       background-image: linear-gradient(
         to bottom,
