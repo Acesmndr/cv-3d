@@ -8,7 +8,7 @@ const SUBTITLES = [
   'I got into programming back in 2009 when I first learnt JavaScript',
   'And then and there I fell in love with it.',
   'I\'m from Kathmandu, the city of temples',
-  'and for the last ~5 years, I\'ve been learning and growing at CloudFactory.',
+  'and for the last five years, I\'ve been learning and growing at CloudFactory.',
   'Along the way I have gathered a lot of skills to my arsenal.',
   'I\'m good at things but I can\'t say that I have mastered anything just yet.',
   'Still, I do love crafting new things',
