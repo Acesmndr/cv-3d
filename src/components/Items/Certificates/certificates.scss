@@ -45,7 +45,7 @@
 }
 .certificate-1 {
   &__front {
-    background-image: url('../../../images/degree.jpg');
+    background-image: url('../../../images/ace.jpeg');
 
     &::before {
       content: "";
@@ -67,7 +67,7 @@
   left: vres(19.5);
   &__front {
     background-size: contain;
-    background-image: url('../../../images/ideathon.jpg');
+    background-image: url('../../../images/degree.jpg');
     background-color: black;
     // border: vres(0.5) solid $cuadro-2;
     &::before {
@@ -89,7 +89,7 @@
 .certificate-3 {
   left: vres(23);
   &__front {
-    background-image: url('../../../images/interfaith.jpg');
+    background-image: url('../../../images/ideathon.jpg');
     background-color: black;
     &::before {
       content: "";
