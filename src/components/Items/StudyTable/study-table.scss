@@ -28,6 +28,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  /** Here it was vres12 */
   width: vres(14);
   height: vres(7);
 
@@ -64,7 +65,12 @@
   &__top {
     background-color: #2b0d03;
     background-image: url('../../../images/wood-rotated.png');
-    background-size: vw(2);
+    @if $isChromeBrowser {
+      background-size: 40px;
+      background-repeat: repeat;
+    } @else {
+      background-size: vw(2);
+    }
     overflow: hidden;
 
     &::before {

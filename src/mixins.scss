@@ -1,4 +1,8 @@
-@function vres($size) {
+$isChromeBrowser: true;
+@function vres($size, $isChrome: $isChromeBrowser) {
+  @if $isChrome {
+    @return $size * 1vw;
+  }
   @return $size * 4vw;
 }
 

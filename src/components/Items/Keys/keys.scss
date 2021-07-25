@@ -12,11 +12,19 @@
   text-align: center;
   line-height: 10vh;
   &.key-left {
-    transform: translateX(vres(-1.25)) translateY(vres(-2.5)) translateZ(vres(25));
+    @if $isChromeBrowser {
+      transform: translateX(vres(-30)) translateY(vres(-20));
+    } @else {
+      transform: translateX(vres(-1.25)) translateY(vres(-2.5)) translateZ(vres(25));
+    }
     left: 0;
   }
   &.key-right {
-    transform: translateX(vres(16.25)) translateY(vres(-2.5)) translateZ(vres(25));
+    @if $isChromeBrowser {
+      transform: translateX(vres(30)) translateY(vres(-20));
+    } @else {
+      transform: translateX(vres(16.25)) translateY(vres(-2.5)) translateZ(vres(25));
+    }
     right: 0;
   }
   &.hide-key {

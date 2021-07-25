@@ -1,40 +1,18 @@
+@import "../../mixins.scss";
 @import "../../palette";
-@import "../../mixins";
-
-/**/
-*,
-*::after,
-*::before {
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-  transform-style: preserve-3d;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Generic */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: vres(10);
-  height: 100vh;
-  overflow: hidden;
-  background-image: radial-gradient(white, #2a9aea);
-  transform: translateZ(0);
-  &.brave {
-    width: 60vw;
-  }
-}
 
 .face {
   position: absolute;
 }
 
 .house {
-  height: 20vw;
-  width: 20vw;
+  @if $isChromeBrowser {
+    height: 28vw;
+    width: 28vw;  
+  } @else {
+    height: 20vw;
+    width: 20vw;
+  }
 }
 .h-shadow {
   position: absolute;

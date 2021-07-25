@@ -103,7 +103,14 @@
   }
 }
 .frame-top {
-  transform: translateZ(32vw);
+  @if $isChromeBrowser {
+    transform: translate3d(0.05vw, 0vw, 7.915vw);
+  } @else {
+    transform: translateZ(32vw);
+  }
 }
 .frame-bottom {
+  @if $isChromeBrowser {
+    transform: translate3d(0.05vw, 0vw, -0.48vw);
+  }
 }

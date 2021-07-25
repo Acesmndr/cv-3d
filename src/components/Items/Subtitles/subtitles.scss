@@ -7,14 +7,20 @@
   font-size: 3vh;
   color: white;
   opacity: 0.75;
-  min-width: vres(12.5);
-  left: 75%;
-  transform: translateZ(vres(25));
+  @if $isChromeBrowser {
+    min-width: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    min-width: vres(12.5);
+    left: 75%;
+    transform: translateZ(vres(25));
+    margin-left: auto;
+    margin-right: auto;
+  }
   text-align: center;
   border-radius: 2px;
   bottom: -15vh;
-  margin-left: auto;
-  margin-right: auto;
   &.safari-subtitles {
     bottom: 10vh;
   }
