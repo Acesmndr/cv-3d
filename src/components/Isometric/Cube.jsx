@@ -7,7 +7,7 @@ export const FrontFace = styled.div`
   height: ${(props) => props.height}vw;
   transform-origin: bottom left;
   transform: rotateX(-90deg)
-    translateZ(${(props) => - props.height - (props.depth * 2)}vw);
+    translateZ(${(props) => -(props.height - (props.depth * 2))}vw);
   ${(props) => props.styles}
 `;
 

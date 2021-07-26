@@ -1,50 +1,36 @@
-import * as React from 'react';
-import './study-table.scss';
+import * as React from "react";
+import styled from "styled-components";
+import { vres } from "../../../mixin";
+import Surface from "./Surface";
+import TableLeg from "./TableFoot";
+
+const Table = styled.div`
+  position: absolute;
+  left: ${vres(1)};
+  top: ${vres(1)};
+  width: ${vres(14)};
+  height: ${vres(9)};
+  transform: translateZ(${vres(0.5)});
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background-color: #000;
+    filter: blur(${vres(4)});
+    transform: translateZ(0);
+  }
+`;
 
 const StudyTable = () => (
-  <div className="study-table">
-    <div className="study">
-      <div className="study__front face"> </div>
-      <div className="study__back face"> </div>
-      <div className="study__right face"> </div>
-      <div className="study__left face"> </div>
-      <div className="study__top face"> </div>
-      <div className="study__bottom face"> </div>
-    </div>
-    <div className="table-foot">
-      <div className="table-foot__front face"> </div>
-      <div className="table-foot__back face"> </div>
-      <div className="table-foot__right face"> </div>
-      <div className="table-foot__left face"> </div>
-      <div className="table-foot__top face"> </div>
-      <div className="table-foot__bottom face"> </div>
-    </div>
-    <div className="table-foot">
-      <div className="table-foot__front face"> </div>
-      <div className="table-foot__back face"> </div>
-      <div className="table-foot__right face"> </div>
-      <div className="table-foot__left face"> </div>
-      <div className="table-foot__top face"> </div>
-      <div className="table-foot__bottom face"> </div>
-    </div>
-    <div className="table-foot">
-      <div className="table-foot__front face"> </div>
-      <div className="table-foot__back face"> </div>
-      <div className="table-foot__right face"> </div>
-      <div className="table-foot__left face"> </div>
-      <div className="table-foot__top face"> </div>
-      <div className="table-foot__bottom face"> </div>
-    </div>
-    <div className="table-foot">
-      <div className="table-foot__front face"> </div>
-      <div className="table-foot__back face"> </div>
-      <div className="table-foot__right face"> </div>
-      <div className="table-foot__left face"> </div>
-      <div className="table-foot__top face"> </div>
-      <div className="table-foot__bottom face"> </div>
-    </div>
-    <div className="table-shadow"></div>
-  </div>
+  <Table>
+    <Surface />
+    <TableLeg />
+    <TableLeg />
+    <TableLeg />
+    <TableLeg />
+  </Table>
 );
 
 export default StudyTable;

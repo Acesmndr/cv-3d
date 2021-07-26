@@ -10,14 +10,6 @@ import {
   TopFace,
 } from "../../Isometric/Cube";
 
-const maincube = {
-  left: ,
-  top: ,
-  width: ,
-  height: ,
-  transform: css``,
-};
-
 const style = {
   front: css``,
   back: css``,
@@ -31,11 +23,11 @@ const CubeProps = cprops(3, 0.1, 1);
 
 const Cube = styled.div`
   position: absolute;
-  left: ${vres(maincube.left)};
-  top: ${vres(maincube.top)};
-  width: ${vres(maincube.width)};
-  height: ${vres(maincube.height)};
-  transform: ${maincube.transform};
+  left: ${vres()};
+  top: ${vres()};
+  width: ${vres()};
+  height: ${vres()};
+  transform: ;
 `;
 
 const Component = () => (
