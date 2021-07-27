@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
-import IDCard from "../../../images/idcard.jpg";
 import {
-  white3,
-  white2,
+  black1,
+  black2,
+  black3,
 } from "../../../palette";
 
 import {
@@ -18,38 +18,43 @@ import {
 
 const style = {
   front: css`
-    background-color: ${white2};
+    background-color: ${black2};
   `,
   back: css`
-    background-color: ${white3};
+    background-color: ${black3};
   `,
   right: css`
-    background-color: ${white3};
+    background-color: ${black3};
   `,
   left: css`
-    background-color: ${white2};
+    background-color: ${black3};
   `,
-  top: css`background-image: url(${IDCard});
-  background-size: cover;
-}`,
+  top: css`
+    background-image: linear-gradient(to right, ${black1}, ${black3});
+  `,
   bottom: css`
-    background-color: ${white3};
+    background-color: ${black3};
   `,
 };
 
-const CubeProps = cprops(0.68, 0.012, 0.522);
+const CubeProps = cprops(0.55, 0.35, 2.2);
 
 const Cube = styled.div`
   position: absolute;
-  left: ${vres(4)};
-  top: ${vres(7)};
+  left: ${vres(1.75)};
+  top: ${vres(1)};
   width: ${vres(2)};
-  height: ${vres(2.5)};
-  transform: translateZ(${vres(7.05)}) rotateZ(-25deg);
+  height: ${vres(2)};
+  transform: ${(props) =>
+    props.left
+      ? `translateZ(${vres(-4)}) rotateZ(90deg) translateX(${vres(
+          2
+        )}) translateY(${vres(-0.5)})`
+      : `translateZ(${vres(-4)})`};
 `;
 
-const IdentityCard = () => (
-  <Cube>
+const Pedestal = ({ left }) => (
+  <Cube left={left}>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
     <RightFace {...CubeProps} styles={style.right} />
@@ -59,4 +64,4 @@ const IdentityCard = () => (
   </Cube>
 );
 
-export default IdentityCard;
+export default Pedestal;

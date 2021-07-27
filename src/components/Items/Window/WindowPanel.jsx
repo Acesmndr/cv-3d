@@ -1,11 +1,7 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
-import IDCard from "../../../images/idcard.jpg";
-import {
-  white3,
-  white2,
-} from "../../../palette";
+import Kathmandu from "../../../images/kathmandu.jpg";
 
 import {
   BackFace,
@@ -17,38 +13,38 @@ import {
 } from "../../Isometric/Cube";
 
 const style = {
-  front: css`
-    background-color: ${white2};
-  `,
-  back: css`
-    background-color: ${white3};
-  `,
+  front: css``,
+  back: css``,
   right: css`
-    background-color: ${white3};
+    background-image: url(${Kathmandu});
+    background-size: cover;
+    background-color: black;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ccb76a00 50%, #00086770);
+    }
+  }
   `,
-  left: css`
-    background-color: ${white2};
-  `,
-  top: css`background-image: url(${IDCard});
-  background-size: cover;
-}`,
-  bottom: css`
-    background-color: ${white3};
-  `,
+  left: css``,
+  top: css``,
+  bottom: css``,
 };
 
-const CubeProps = cprops(0.68, 0.012, 0.522);
+const CubeProps = cprops(0.125, 8, 2.5);
 
 const Cube = styled.div`
   position: absolute;
-  left: ${vres(4)};
-  top: ${vres(7)};
-  width: ${vres(2)};
-  height: ${vres(2.5)};
-  transform: translateZ(${vres(7.05)}) rotateZ(-25deg);
+  left: ${vres(-0.1)};
+  top: ${vres(0)};
+  width: ${vres(0.125)};
+  height: ${vres(8)};
 `;
 
-const IdentityCard = () => (
+const WindowPanel = () => (
   <Cube>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
@@ -59,4 +55,4 @@ const IdentityCard = () => (
   </Cube>
 );
 
-export default IdentityCard;
+export default WindowPanel;

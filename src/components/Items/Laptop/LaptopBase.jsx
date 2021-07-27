@@ -1,10 +1,9 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
-import IDCard from "../../../images/idcard.jpg";
+import KeyboardLayout from "../../../images/keyboard.jpg";
 import {
-  white3,
-  white2,
+  black3,
 } from "../../../palette";
 
 import {
@@ -18,37 +17,42 @@ import {
 
 const style = {
   front: css`
-    background-color: ${white2};
+    background-color: #d7d7d7;
   `,
   back: css`
-    background-color: ${white3};
+    background-color: #d7d7d7;
   `,
   right: css`
-    background-color: ${white3};
+    background-color: #d7d7d7;
   `,
   left: css`
-    background-color: ${white2};
+    background-color: #d7d7d7;
   `,
-  top: css`background-image: url(${IDCard});
-  background-size: cover;
-}`,
+  top: css`
+    background-image: url(${KeyboardLayout});
+    background-size: cover;
+    background-size: contain;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-color: #d7d7d7;
+  `,
   bottom: css`
-    background-color: ${white3};
+    background-color: ${black3};
   `,
 };
 
-const CubeProps = cprops(0.68, 0.012, 0.522);
+const CubeProps = cprops(2.92, 0.075, 0.972);
 
 const Cube = styled.div`
   position: absolute;
-  left: ${vres(4)};
-  top: ${vres(7)};
+  left: ${vres(6)};
+  top: ${vres(4.506)};
   width: ${vres(2)};
   height: ${vres(2.5)};
-  transform: translateZ(${vres(7.05)}) rotateZ(-25deg);
+  transform: translateZ(${vres(7.05)}); ;
 `;
 
-const IdentityCard = () => (
+const LaptopBase = () => (
   <Cube>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
@@ -59,4 +63,4 @@ const IdentityCard = () => (
   </Cube>
 );
 
-export default IdentityCard;
+export default LaptopBase;

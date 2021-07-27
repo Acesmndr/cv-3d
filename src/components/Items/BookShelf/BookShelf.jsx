@@ -1,138 +1,144 @@
-import * as React from 'react';
-import './book-shelf.scss';
+import * as React from "react";
+import Shelf from "./Shelf";
+import Book1 from "../../../images/book1.jpg";
+import Book2 from "../../../images/book2.jpg";
+import Book3 from "../../../images/book3.jpg";
+import Book4 from "../../../images/book4.jpg";
+import Book5 from "../../../images/book5.jpg";
+import Book6 from "../../../images/book6.jpg";
+import Book7 from "../../../images/book7.jpg";
+import Book8 from "../../../images/book8.jpg";
+import Book9 from "../../../images/book9.jpg";
+import Book10 from "../../../images/book10.jpg";
+import Book11 from "../../../images/book11.jpg";
+import Book12 from "../../../images/book12.jpg";
+import Book13 from "../../../images/book13.jpg";
+import Book14 from "../../../images/book14.jpg";
+import Book15 from "../../../images/book15.jpg";
+import { vres } from "../../../mixin";
+import Book from "./Book";
+import styled from "styled-components";
+
+const BookHolder = styled.div`
+  position: absolute;
+`;
+
+const books = [
+  {
+    de: "boook1",
+    image: Book1,
+    left: 18.95,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#dab51d",
+  },
+  {
+    de: "boook2",
+    image: Book2,
+    left: 19.2,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "black",
+  },
+  {
+    de: "boook3",
+    image: Book3,
+    left: 19.45,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "rgb(167, 238, 178)",
+  },
+  {
+    de: "boook4",
+    image: Book4,
+    left: 19.65,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "grey",
+  },
+  {
+    de: "boook5",
+    image: Book5,
+    left: 19.85,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#114f9a",
+  },
+  {
+    de: "boook6",
+    image: Book6,
+    left: 20.05,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#eb325b",
+  },
+  {
+    de: "boook7",
+    image: Book7,
+    left: 20.25,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#1a1a1a",
+  },
+  {
+    de: "boook8",
+    image: Book8,
+    left: 20.45,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#90485c",
+  },
+  {
+    de: "boook9",
+    image: Book9,
+    left: 20.7,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#cad6e6",
+  },
+  {
+    id: "book10",
+    image: Book10,
+    left: 20.9,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#da5652",
+  },
+  {
+    id: "book11",
+    image: Book11,
+    left: 21.1,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#4a6183",
+  },
+  {
+    id: "book12",
+    image: Book12,
+    left: 21.3,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#bc5e90",
+  },
+  {
+    id: "book13",
+    image: Book13,
+    left: 21.5,
+    transform: `translateZ(${vres(5.22)}) rotateY(2deg) rotateZ(10deg)`,
+    color: "#51aab8",
+  },
+  {
+    id: "book14",
+    image: Book14,
+    left: 23.75,
+    transform: `translateZ(${vres(5.22)}) rotateY(-90deg)`,
+    color: "#28496a",
+  },
+  {
+    id: "book15",
+    image: Book15,
+    left: 23.75,
+    transform: `translateZ(${vres(5.36)}) rotateY(-90deg);`,
+    color: "#353535",
+  },
+];
 
 const BookShelf = () => (
   <>
-    <div className="shelf">
-    <div className="shelf__front face"> </div>
-    <div className="shelf__back face"> </div>
-    <div className="shelf__right face"> </div>
-    <div className="shelf__left face"> </div>
-    <div className="shelf__top face"> </div>
-    <div className="shelf__bottom face"> </div>
-  </div>
-  <div className="books"> 
-    <div className="book">
-      <div className="book__front book1 face"> </div>
-      <div className="book__back book1 face"> </div>
-      <div className="book__right book1 face"> </div>
-      <div className="book__left book1 face"> </div>
-      <div className="book__top book1 face"> </div>
-      <div className="book__bottom book1 face"> </div>
-    </div>
-    <div className="book book2">
-      <div className="book__front book2 face"> </div>
-      <div className="book__back book2 face"> </div>
-      <div className="book__right book2 face"> </div>
-      <div className="book__left book2 face"> </div>
-      <div className="book__top book2 face"> </div>
-      <div className="book__bottom book2 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book3 face"> </div>
-      <div className="book__back book3 face"> </div>
-      <div className="book__right book3 face"> </div>
-      <div className="book__left book3 face"> </div>
-      <div className="book__top book3 face"> </div>
-      <div className="book__bottom book3 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book4 face"> </div>
-      <div className="book__back book4 face"> </div>
-      <div className="book__right book4 face"> </div>
-      <div className="book__left book4 face"> </div>
-      <div className="book__top book4 face"> </div>
-      <div className="book__bottom book4 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book5 face"> </div>
-      <div className="book__back book5 face"> </div>
-      <div className="book__right book5 face"> </div>
-      <div className="book__left book5 face"> </div>
-      <div className="book__top book5 face"> </div>
-      <div className="book__bottom book5 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book6 face"> </div>
-      <div className="book__back book6 face"> </div>
-      <div className="book__right book6 face"> </div>
-      <div className="book__left book6 face"> </div>
-      <div className="book__top book6 face"> </div>
-      <div className="book__bottom book6 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book7 face"> </div>
-      <div className="book__back book7 face"> </div>
-      <div className="book__right book7 face"> </div>
-      <div className="book__left book7 face"> </div>
-      <div className="book__top book7 face"> </div>
-      <div className="book__bottom book7 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book8 face"> </div>
-      <div className="book__back book8 face"> </div>
-      <div className="book__right book8 face"> </div>
-      <div className="book__left book8 face"> </div>
-      <div className="book__top book8 face"> </div>
-      <div className="book__bottom book8 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book9 face"> </div>
-      <div className="book__back book9 face"> </div>
-      <div className="book__right book9 face"> </div>
-      <div className="book__left book9 face"> </div>
-      <div className="book__top book9 face"> </div>
-      <div className="book__bottom book9 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book10 face"> </div>
-      <div className="book__back book10 face"> </div>
-      <div className="book__right book10 face"> </div>
-      <div className="book__left book10 face"> </div>
-      <div className="book__top book10 face"> </div>
-      <div className="book__bottom book10 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book11 face"> </div>
-      <div className="book__back book11 face"> </div>
-      <div className="book__right book11 face"> </div>
-      <div className="book__left book11 face"> </div>
-      <div className="book__top book11 face"> </div>
-      <div className="book__bottom book11 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book12 face"> </div>
-      <div className="book__back book12 face"> </div>
-      <div className="book__right book12 face"> </div>
-      <div className="book__left book12 face"> </div>
-      <div className="book__top book12 face"> </div>
-      <div className="book__bottom book12 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book13 face"> </div>
-      <div className="book__back book13 face"> </div>
-      <div className="book__right book13 face"> </div>
-      <div className="book__left book13 face"> </div>
-      <div className="book__top book13 face"> </div>
-      <div className="book__bottom book13 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book14 face"> </div>
-      <div className="book__back book14 face"> </div>
-      <div className="book__right book14 face"> </div>
-      <div className="book__left book14 face"> </div>
-      <div className="book__top book14 face"> </div>
-      <div className="book__bottom book14 face"> </div>
-    </div>
-    <div className="book">
-      <div className="book__front book15 face"> </div>
-      <div className="book__back book15 face"> </div>
-      <div className="book__right book15 face"> </div>
-      <div className="book__left book15 face"> </div>
-      <div className="book__top book15 face"> </div>
-      <div className="book__bottom book15 face"> </div>
-    </div>
-  </div>
+    <Shelf />
+    <BookHolder>
+      {books.map(book => (
+        <Book {...book} />
+      ))}
+    </BookHolder>
   </>
 );
 
