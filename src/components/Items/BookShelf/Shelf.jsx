@@ -3,12 +3,6 @@ import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
 import WoodBg from "../../../images/wood.jpg";
 import {
-  white1,
-  white2,
-  black1,
-  black2,
-  black3,
-  neon2,
   neon1,
 } from "../../../palette";
 
