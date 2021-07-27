@@ -1,7 +1,7 @@
 import * as React from "react";
 import Laptop from "../Items/Laptop/Laptop";
 import Monitor from "../Items/Monitor/Monitor";
-import Hobbies from "../Items/Photos/Photos";
+import Photos from "../Items/Photos/Photos";
 import Chair from "../Items/Chair/Chair";
 import StudyTable from "../Items/StudyTable/StudyTable";
 import Window from "../Items/Window/Window";
@@ -15,7 +15,6 @@ import Subtitles from "../Items/Subtitles/Subtitles";
 import Keys from "../Items/Keys/Keys";
 import { isChrome } from "../../mixin";
 import { Room } from "../Room/Room";
-import Photos from "../Items/Photos/Photos";
 
 // const calc = (x, y, rx, ry, rz, tx, ty, tz, s) => [rx -(y - window.innerHeight / 2) / 100, ry, rz - (x - window.innerWidth / 2) / 100, tx, ty, tz, s];
 const transform = (rx, ry, rz, tx, ty, tz, s) =>
@@ -143,13 +142,13 @@ const Isometric = ({ isSafari }) => {
         <Room count={keyCount}>
           <Monitor currentIndex={keyCount} />
           <Certificates />
-          {/* <BookShelf /> */}
-          {/* <Window /> */}
-          <Hobbies />
+          <BookShelf />
+          <Window />
+          <Photos />
           <StudyTable />
           <Laptop currentIndex={props.count} />
           <Tablet />
-          {/* <IdentityCard /> */}
+          <IdentityCard />
           <Chair currentIndex={props.count} />
         </Room>
       </animated.div>

@@ -1,6 +1,5 @@
 import * as React from "react";
 import Photo from "./Photo";
-import "./photos.scss";
 import CosplayImg from "../../../images/cosplay.jpg";
 import AssociateProducerImg from "../../../images/producer.jpg";
 import Plank from "./Plank";

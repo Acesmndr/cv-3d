@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './laptop.scss';
 import LaptopBase from './LaptopBase';
 import LaptopScreen from './LaptopScreen';
 
