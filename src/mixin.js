@@ -1,5 +1,3 @@
-import { css } from "styled-components";
-
 export const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
 export const vres = (num) => isChrome ? `${num}vw` : `${num * 4}vw`;

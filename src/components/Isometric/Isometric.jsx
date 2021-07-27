@@ -14,10 +14,10 @@ import Tablet from "../Items/Tablet/Tablet";
 import IdentityCard from "../Items/IdentityCard/IdentityCard";
 import Subtitles from "../Items/Subtitles/Subtitles";
 import Keys from "../Items/Keys/Keys";
+import { isChrome } from "../../mixin";
+import { Room } from "../Room/Room";
 
 // const calc = (x, y, rx, ry, rz, tx, ty, tz, s) => [rx -(y - window.innerHeight / 2) / 100, ry, rz - (x - window.innerWidth / 2) / 100, tx, ty, tz, s];
-const isChrome = true;
-
 const transform = (rx, ry, rz, tx, ty, tz, s) =>
   // 'perspective(2500px) rotateX(90deg) rotateY(0deg) rotateZ(-9deg) translateX(-10vw) translateY(0vw) translateZ(-5vw) scale3d(0.1, 0.1, 0.1)';
   `perspective(${
@@ -140,7 +140,18 @@ const Isometric = ({ isSafari }) => {
             }
           }}
         />
-        <Room count={keyCount} />
+        <Room count={keyCount}>
+          {/* <Monitor currentIndex={props.count} /> */}
+          {/* <Certificates /> */}
+          {/* <BookShelf /> */}
+          {/* <Window /> */}
+          {/* <Hobbies /> */}
+          <StudyTable />
+          {/* <Laptop currentIndex={props.count} /> */}
+          {/* <Tablet /> */}
+          {/* <IdentityCard /> */}
+          {/* <Chair currentIndex={props.count} /> */}
+        </Room>
       </animated.div>
       <Subtitles currentIndex={keyCount} isSafari={isSafari} />
       <Keys
@@ -151,67 +162,5 @@ const Isometric = ({ isSafari }) => {
     </>
   );
 };
-
-const Room = (props) => (
-  <div className="house" id="h" {...props}>
-    <div className="h-shadow"></div>
-    <div className="floor">
-      <div className="floor__front face"> </div>
-      <div className="floor__back face"> </div>
-      <div className="floor__right face"> </div>
-      <div className="floor__left face"> </div>
-      <div className="floor__top face"> </div>
-      <a
-        href="https://www.linkedin.com/in/acesmndr/"
-        referrerPolicy="no-referrer no-follow"
-      >
-        <div className="floor__bottom face"></div>
-      </a>
-    </div>
-    <div className="left-wall">
-      <div className="left-wall__front face"> </div>
-      <div className="left-wall__back face"> </div>
-      <div className="left-wall__right face"> </div>
-      <div className="left-wall__left face"> </div>
-      <div className="left-wall__top face"> </div>
-      <div className="left-wall__bottom face"> </div>
-    </div>
-    <div className="ceiling-left">
-      <div className="ceiling-left__front face"> </div>
-      <div className="ceiling-left__back face"> </div>
-      <div className="ceiling-left__right face"> </div>
-      <div className="ceiling-left__left face"> </div>
-      <div className="ceiling-left__top face"> </div>
-      <div className="ceiling-left__bottom face"> </div>
-    </div>
-    <div className="right-wall">
-      <div className="right-wall__front face"> </div>
-      <div className="right-wall__back face"> </div>
-      <div className="right-wall__right face"> </div>
-      <div className="right-wall__left face"> </div>
-      <div className="right-wall__top face"> </div>
-      <div className="right-wall__bottom face"> </div>
-    </div>
-    <div className="ceiling-right">
-      <div className="ceiling-right__front face"> </div>
-      <div className="ceiling-right__back face"> </div>
-      <div className="ceiling-right__right face"> </div>
-      <div className="ceiling-right__left face"> </div>
-      <div className="ceiling-right__top face"> </div>
-      <div className="ceiling-right__bottom face"> </div>
-    </div>
-    <Monitor currentIndex={props.count} />
-    {/* <Door /> */}
-    <Certificates />
-    <BookShelf />
-    <Window />
-    <Hobbies />
-    <StudyTable />
-    <Laptop currentIndex={props.count} />
-    <Tablet />
-    <IdentityCard />
-    <Chair currentIndex={props.count} />
-  </div>
-);
 
 export default Isometric;

@@ -1,64 +1,65 @@
 import React from "react";
 import styled from "styled-components";
+import { vres } from "../../mixin";
 
 export const FrontFace = styled.div`
   position: absolute;
-  width: ${(props) => props.width}vw;
-  height: ${(props) => props.height}vw;
+  width: ${(props) => vres(props.width)};
+  height: ${(props) => vres(props.height)};
   transform-origin: bottom left;
   transform: rotateX(-90deg)
-    translateZ(${(props) => -(props.height - (props.depth * 2))}vw);
+    translateZ(${(props) => vres(-(props.height - (props.depth * 2)))});
   ${(props) => props.styles}
 `;
 
 export const BackFace = styled.div`
   position: absolute;
-  width: ${(props) => props.width}vw;
-  height: ${(props) => props.height}vw;
+  width: ${(props) => vres(props.width)};
+  height: ${(props) => vres(props.height)};
   transform-origin: top left;
   transform: rotateX(-90deg) rotateY(180deg)
-    translateX(${(props) => -props.width}vw)
-    translateY(${(props) => -props.height}vw);
+    translateX(${(props) => vres(-props.width)})
+    translateY(${(props) => vres(-props.height)});
   ${(props) => props.styles}
 `;
 
 export const RightFace = styled.div`
   position: absolute;
-  width: ${(props) => props.depth * 2}vw;
-  height: ${(props) => props.height}vw;
+  width: ${(props) => vres(props.depth * 2)};
+  height: ${(props) => vres(props.height)};
   transform-origin: top left;
   transform: rotateY(90deg) rotateZ(-90deg)
-    translateZ(${(props) => props.width}vw)
-    translateX(${(props) => -props.depth * 2}vw)
-    translateY(${(props) => -props.height}vw);
+    translateZ(${(props) => vres(props.width)})
+    translateX(${(props) => vres(-props.depth * 2)})
+    translateY(${(props) => vres(-props.height)});
   ${(props) => props.styles}
 `;
 
 export const LeftFace = styled.div`
   position: absolute;
-  width: ${(props) => props.depth * 2}vw;
-  height: ${(props) => props.height}vw;
+  width: ${(props) => vres(props.depth * 2)};
+  height: ${(props) => vres(props.height)};
   transform-origin: top left;
   transform: rotateY(-90deg) rotateZ(90deg)
-    translateY(${(props) => -props.height}vw);
+    translateY(${(props) => vres(-props.height)});
   ${(props) => props.styles}
 `;
 
 export const TopFace = styled.div`
   position: absolute;
-  width: ${(props) => props.width}vw;
-  height: ${(props) => props.depth * 2}vw;
+  width: ${(props) => vres(props.width)};
+  height: ${(props) => vres(props.depth * 2)};
   transform-origin: top left;
-  transform: translateZ(${(props) => props.height}vw);
+  transform: translateZ(${(props) => vres(props.height)});
   ${(props) => props.styles}
 `;
 
 export const BottomFace = styled.div`
   position: absolute;
-  width: ${(props) => props.width}vw;
-  height: ${(props) => props.depth * 2}vw;
+  width: ${(props) => vres(props.width)};
+  height: ${(props) => vres(props.depth * 2)};
   transform-origin: top left;
-  transform: rotateY(180deg) translateX(${(props) => -props.width}vw);
+  transform: rotateY(180deg) translateX(${(props) => vres(-props.width)});
   ${(props) => props.styles}
 `;
 

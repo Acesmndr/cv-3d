@@ -19,7 +19,7 @@ const style = {
     background-color: ${black3};
   `,
   right: css`
-    background-color: darken(${black3}, 20);
+    background-color: ${black3};
   `,
   left: css`
     background-color: ${black2};
@@ -38,7 +38,7 @@ const style = {
       right: 0;
       border-radius: 10%;
       transform: translateZ(${vres(-0.1)});
-      background-color: rgba(darken(${black3}, 30), 0.75);
+      background-color: rgba(${black3}, 0.75);
       filter: blur(${vres(0.35)});
     }
   `,
