@@ -34,17 +34,17 @@
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-color: #d7d7d7;
-    // background-color: $white-2;
-    // background-color: lighten($neon-1, 10);
-    // border: vres(0.2) solid rgba($neon-1, 0.25);
+    // background-color: $white2;
+    // background-color: lighten($neon1, 10);
+    // border: vres(0.2) solid rgba($neon1, 0.25);
     // animation: pantalla-tablet 0.25s infinite;
   }
   &__bottom {
-    background-color: darken($black-3, 40);
-    // box-shadow: vres(0.25) vres(0.25) vres(0.5) rgba(darken($neon-2, 20), 0.75),
-    //   vres(-0.25) vres(0.25) vres(0.5) rgba(darken($neon-2, 20), 0.75),
-    //   vres(-0.25) vres(-0.25) vres(0.5) rgba(darken($neon-2, 20), 0.75),
-    //   vres(0.25) vres(-0.25) vres(0.5) rgba(darken($neon-2, 20), 0.75);
+    background-color: darken($black3, 40);
+    // box-shadow: vres(0.25) vres(0.25) vres(0.5) rgba(darken($neon2, 20), 0.75),
+    //   vres(-0.25) vres(0.25) vres(0.5) rgba(darken($neon2, 20), 0.75),
+    //   vres(-0.25) vres(-0.25) vres(0.5) rgba(darken($neon2, 20), 0.75),
+    //   vres(0.25) vres(-0.25) vres(0.5) rgba(darken($neon2, 20), 0.75);
   }
 }
 
@@ -68,10 +68,10 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      // box-shadow: vres(0.125) vres(0.125) vres(1) rgba($neon-1, 0.5),
-      //   vres(-0.125) vres(0.125) vres(1) rgba($neon-1, 0.5),
-      //   vres(0.125) vres(-0.125) vres(1) rgba($neon-1, 0.5),
-      //   vres(-0.125) vres(-0.125) vres(1) rgba($neon-1, 0.5);
+      // box-shadow: vres(0.125) vres(0.125) vres(1) rgba($neon1, 0.5),
+      //   vres(-0.125) vres(0.125) vres(1) rgba($neon1, 0.5),
+      //   vres(0.125) vres(-0.125) vres(1) rgba($neon1, 0.5),
+      //   vres(-0.125) vres(-0.125) vres(1) rgba($neon1, 0.5);
   
       background-image: url('../../../images/firstcodeloop.gif');
       background-size: cover;
@@ -83,8 +83,8 @@
       background-image: url('../../../images/dribbble.jpg');
       cursor: pointer;
     }
-    // border: vres(0.125) solid darken($black-3, 10);
-    // background-color: lighten($neon-1, 10);
+    // border: vres(0.125) solid darken($black3, 10);
+    // background-color: lighten($neon1, 10);
     border: vres(0.075) solid black;
     // animation: pantalla-tablet 0.25s infinite;
     .laptop-link {
@@ -98,21 +98,21 @@
     background-color: #d7d7d7;
   }
   &__right {
-    background-color: $white-3;
+    background-color: $white3;
   }
   &__left {
-    background-color: darken($white-2, 10);
-    // background-color: $white-2;
+    background-color: darken($white2, 10);
+    // background-color: $white2;
   }
   &__top {
-    background-color: $white-2;
+    background-color: $white2;
   }
   &__bottom {
-    background-color: darken($black-3, 40);
+    background-color: darken($black3, 40);
   }
 }
 @keyframes pantalla-tablet {
   from {
-    background-color: lighten($neon-1, 5);
+    background-color: lighten($neon1, 5);
   }
 }

@@ -34,7 +34,7 @@ const style = {
   back: css`background-color: ${white3};`,
   right: css`background-color: ${white4};`,
   left: css`background-color: ${white2}};`,
-  top: css`background-image: linear-gradient(to left, ${white2}}, $white-1);`,
+  top: css`background-image: linear-gradient(to left, ${white2}}, $white1);`,
   bottom: css`background-color: ${white3};`,
 };
 

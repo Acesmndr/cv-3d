@@ -142,13 +142,12 @@ const Isometric = ({ isSafari }) => {
         />
         <Room count={keyCount}>
           <Monitor currentIndex={keyCount} />
-          {/* <Certificates /> */}
+          <Certificates />
           {/* <BookShelf /> */}
           {/* <Window /> */}
-          {/* <Hobbies /> */}
+          <Hobbies />
           <StudyTable />
-          <Photos />
-          {/* <Laptop currentIndex={props.count} /> */}
+          <Laptop currentIndex={props.count} />
           <Tablet />
           {/* <IdentityCard /> */}
           <Chair currentIndex={props.count} />

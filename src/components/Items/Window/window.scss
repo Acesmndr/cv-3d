@@ -49,22 +49,22 @@
   height: vres(0.5);
 
   &__front {
-    background-color: $black-2;
+    background-color: $black2;
   }
   &__back {
-    background-color: $black-3;
+    background-color: $black3;
   }
   &__right {
-    background-color: $black-3;
+    background-color: $black3;
   }
   &__left {
-    background-color: darken($black-1, 10);
+    background-color: darken($black1, 10);
   }
   &__top{
-    background-color: $black-3;
+    background-color: $black3;
   }
   &__bottom {
-    background-color: $black-3;
+    background-color: $black3;
   }
 }
 .frame-left {
@@ -84,22 +84,22 @@
   height: vres(6);
   
   &__front {
-    background-color: darken($black-1, 10);
+    background-color: darken($black1, 10);
   }
   &__back {
-    background-color: $black-3;
+    background-color: $black3;
   }
   &__right {
-    background-color: $black-3;
+    background-color: $black3;
   }
   &__left {
-    background-color: $black-2;
+    background-color: $black2;
   }
   &__top {
-    background-color: darken($black-1, 10);
+    background-color: darken($black1, 10);
   }
   &__bottom {
-    background-color: $black-3;
+    background-color: $black3;
   }
 }
 .frame-top {

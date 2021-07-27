@@ -21,7 +21,7 @@
     background-size: 32px;
   }
   &__back {
-    background-color: $white-3;
+    background-color: $white3;
     &::before {
       content: "";
       position: absolute;
@@ -29,18 +29,18 @@
       height: vres(0.25);
       border-radius: 50%;
       background-image: radial-gradient(
-        rgba(lighten($neon-1, 5), 0.7) 50%,
-        rgba(darken($neon-2, 10), 0.6),
+        rgba(lighten($neon1, 5), 0.7) 50%,
+        rgba(darken($neon2, 10), 0.6),
         transparent
       );
       filter: blur(vres(1.25));
     }
   }
   // &__right {
-  //   background-color: $white-3;
+  //   background-color: $white3;
   // }
   // &__left {
-  //   background-color: $white-2;
+  //   background-color: $white2;
   // }
   &__top {
     background-image: url('../../../images/wood-rotated.png');
@@ -53,13 +53,13 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba(darken($neon-1, 10), 0.75),
+        rgba(darken($neon1, 10), 0.75),
         transparent
       );
     }
   }
   &__bottom {
-    background-color: $white-3;
+    background-color: $white3;
 
     &::before {
       content: "";
@@ -68,7 +68,7 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba(darken($neon-1, 10), 0.75),
+        rgba(darken($neon1, 10), 0.75),
         transparent
       );
     }
@@ -142,13 +142,13 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba($neon-1, 0.4),
+        rgba($neon1, 0.4),
         transparent
       );
     }
   }
   &__back {
-    background-color: $white-1;
+    background-color: $white1;
   }
   &__right {
     // background-color: black;
@@ -159,8 +159,8 @@
       height: 100%;
       background-image: linear-gradient(
         to left,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
+        rgba($neon1, 0.85),
+        rgba($neon2, 0.35)
       );
     }
   }
@@ -172,13 +172,13 @@
       height: 100%;
       background-image: linear-gradient(
         to left,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
+        rgba($neon1, 0.85),
+        rgba($neon2, 0.35)
       );
     }
   }
   &__top {
-    background-color: darken($white-1, 10);
+    background-color: darken($white1, 10);
     &::before {
       content: "";
       position: absolute;
@@ -186,13 +186,13 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
+        rgba($neon1, 0.85),
+        rgba($neon2, 0.35)
       );
     }
   }
   &__bottom {
-    background-color: lighten($white-3, 14);
+    background-color: lighten($white3, 14);
   }
   &__left,&__right,&__front {
     &.book1 {

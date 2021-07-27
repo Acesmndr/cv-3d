@@ -16,15 +16,15 @@
   transform: translateZ(vres(7.05)) rotateZ(-25deg);
 
 
-  &__front{ background-color: darken($white-2, 10); }
-  &__back{ background-color: $white-3; }
-  &__right{ background-color: $white-3; }
-  &__left{ background-color: $white-2; }
+  &__front{ background-color: darken($white2, 10); }
+  &__back{ background-color: $white3; }
+  &__right{ background-color: $white3; }
+  &__left{ background-color: $white2; }
   &__top{
       background-image: url('../../../images/idcard.jpg');
       background-size: cover;
   }
   &__bottom{
-      background-color: darken($black-3, 40);
+      background-color: darken($black3, 40);
   }
 }

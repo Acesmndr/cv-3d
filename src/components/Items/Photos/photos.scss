@@ -25,7 +25,7 @@
   &__top {
     background-color: #2b0d03;
     background-image: url("../../../images/wood-rotated.png");
-    // background-color: darken($white-1, 10);
+    // background-color: darken($white1, 10);
     &::before {
       content: "";
       position: absolute;
@@ -33,13 +33,13 @@
       height: 100%;
       background-image: linear-gradient(
         to right,
-        rgba(darken($neon-1, 20), 0.75),
+        rgba(darken($neon1, 20), 0.75),
         transparent
       );
     }
   }
   &__bottom {
-    background-color: $white-3;
+    background-color: $white3;
     &::before {
       content: "";
       position: absolute;
@@ -47,7 +47,7 @@
       height: 100%;
       background-image: linear-gradient(
         to right,
-        rgba(darken($neon-1, 20), 0.75),
+        rgba(darken($neon1, 20), 0.75),
         transparent
       );
     }
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darken($white-2, 5);
+    background-color: darken($white2, 5);
     border: vres(0.15) solid #212121;
     &::before {
       content: "";
@@ -127,8 +127,8 @@
   &__front {
     background-image: linear-gradient(
       to bottom,
-      $white-2,
-      darken($white-2, 10)
+      $white2,
+      darken($white2, 10)
     );
     &::before {
       content: "";
@@ -137,16 +137,16 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba($neon-1, 0.4),
+        rgba($neon1, 0.4),
         transparent
       );
     }
   }
   &__back {
-    background-color: $white-2;
+    background-color: $white2;
   }
   &__right {
-    background-color: darken($white-2, 20);
+    background-color: darken($white2, 20);
     &::before {
       content: "";
       position: absolute;
@@ -154,16 +154,16 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
+        rgba($neon1, 0.85),
+        rgba($neon2, 0.35)
       );
     }
   }
   &__left {
-    background-color: $white-2;
+    background-color: $white2;
   }
   &__top {
-    background-color: darken($white-1, 10);
+    background-color: darken($white1, 10);
     &::before {
       content: "";
       position: absolute;
@@ -171,13 +171,13 @@
       height: 100%;
       background-image: linear-gradient(
         to bottom,
-        rgba($neon-1, 0.85),
-        rgba($neon-2, 0.35)
+        rgba($neon1, 0.85),
+        rgba($neon2, 0.35)
       );
     }
   }
   &__bottom {
-    background-color: darken($white-2, 25);
+    background-color: darken($white2, 25);
 
     &::before {
       content: "";
@@ -185,7 +185,7 @@
       right: -50%;
       width: 150%;
       height: 120%;
-      background-color: rgba($black-1, 0.5);
+      background-color: rgba($black1, 0.5);
       filter: blur(vres(0.15));
     }
   }
