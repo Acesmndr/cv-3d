@@ -5,7 +5,6 @@ import TabletImage from "../../../images/medium.jpg";
 import {
   BackFace,
   BottomFace,
-  CubeTemplate,
   FrontFace,
   LeftFace,
   RightFace,

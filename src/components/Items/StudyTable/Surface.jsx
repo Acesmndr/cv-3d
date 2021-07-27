@@ -2,7 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, isChrome, vres } from "../../../mixin";
 import { black2, black3, neon1, neon2, white1 } from "../../../palette";
-import TableBg from '../../../images/wood-rotated.png';
+import TableBg from '../../../images/wood.jpg';
 import {
   BackFace,
   BottomFace,

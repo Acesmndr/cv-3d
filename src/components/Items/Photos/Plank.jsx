@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
-import WoodBg from "../../../images/wood-rotated.png";
+import WoodBg from "../../../images/wood.jpg";
 
 import {
   BackFace,
