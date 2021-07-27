@@ -1,7 +1,14 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
-import WoodBg from "../../../images/wood-rotated.png";
+import {
+  white1,
+  white2,
+  black1,
+  black2,
+  black3,
+  neon2,
+} from "../../../palette";
 
 import {
   BackFace,
@@ -11,33 +18,28 @@ import {
   RightFace,
   TopFace,
 } from "../../Isometric/Cube";
-import { neon2 } from "../../../palette";
 
 const style = {
   front: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-image: linear-gradient(to bottom, ${black2}, ${black3});
   `,
   back: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-image: linear-gradient(
+      to bottom,
+      ${black3},
+      darken(${black3}, 20)
+    );
   `,
   right: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-color: ${black3};
   `,
   left: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-image: linear-gradient(to bottom, ${black2}, ${black3});
   `,
   top: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-image: linear-gradient(to right, ${black1}, ${black3});
+    border-bottom: ${vres(0.1)} solid rgba(${white1}, 0.5);
+
     &::before {
       content: "";
       position: absolute;
@@ -51,25 +53,23 @@ const style = {
     }
   `,
   bottom: css`
-    background-image: url(${WoodBg});
-    background-color: #2b0d03;
-    background-size: 32px;
+    background-color: ${black3};
   `,
 };
 
-const CubeProps = cprops(1.5, 0.25, 5);
+const CubeProps = cprops(0.35, 2, 0.75);
 
 const Cube = styled.div`
   position: absolute;
-  left: ${vres(1)};
-  top: ${vres(15)};
-  width: ${vres(1.5)};
-  height: ${vres(10)};
-  transform: translateZ(${props => vres(props.top ? 9 : 5)});
+  left: ${(props) => vres(props.left ? 4 : -0.25)};
+  top: ${vres(2.5)};
+  width: ${vres(6)};
+  height: ${vres(1)};
+  transform: rotateX(-5deg) translateZ(${vres(0.125)});
 `;
 
-const Plank = ({ top }) => (
-  <Cube top={top}>
+const Armrest = ({ left }) => (
+  <Cube left={left}>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
     <RightFace {...CubeProps} styles={style.right} />
@@ -79,4 +79,4 @@ const Plank = ({ top }) => (
   </Cube>
 );
 
-export default Plank;
+export default Armrest;

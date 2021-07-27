@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./style.scss";
 import Laptop from "../Items/Laptop/Laptop";
 import Monitor from "../Items/Monitor/Monitor";
 import Hobbies from "../Items/Photos/Photos";
@@ -16,6 +15,7 @@ import Subtitles from "../Items/Subtitles/Subtitles";
 import Keys from "../Items/Keys/Keys";
 import { isChrome } from "../../mixin";
 import { Room } from "../Room/Room";
+import Photos from "../Items/Photos/Photos";
 
 // const calc = (x, y, rx, ry, rz, tx, ty, tz, s) => [rx -(y - window.innerHeight / 2) / 100, ry, rz - (x - window.innerWidth / 2) / 100, tx, ty, tz, s];
 const transform = (rx, ry, rz, tx, ty, tz, s) =>
@@ -141,16 +141,17 @@ const Isometric = ({ isSafari }) => {
           }}
         />
         <Room count={keyCount}>
-          {/* <Monitor currentIndex={props.count} /> */}
+          <Monitor currentIndex={keyCount} />
           {/* <Certificates /> */}
           {/* <BookShelf /> */}
           {/* <Window /> */}
           {/* <Hobbies /> */}
           <StudyTable />
+          <Photos />
           {/* <Laptop currentIndex={props.count} /> */}
-          {/* <Tablet /> */}
+          <Tablet />
           {/* <IdentityCard /> */}
-          {/* <Chair currentIndex={props.count} /> */}
+          <Chair currentIndex={props.count} />
         </Room>
       </animated.div>
       <Subtitles currentIndex={keyCount} isSafari={isSafari} />

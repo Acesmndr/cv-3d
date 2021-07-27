@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
+import { white1, white2, black1, black2, black3, neon2} from "../../../palette";
+
 import {
   BackFace,
   BottomFace,

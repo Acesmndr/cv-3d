@@ -1,70 +1,48 @@
-import * as React from 'react';
-import './chair.scss';
+import * as React from "react";
+import styled from "styled-components";
+import { vres } from "../../../mixin";
+import { black3 } from "../../../palette";
+import Armrest from "./Armrest";
+import Backrest from "./Backrest";
+import Pedestal from "./Pedestal";
+import Seat from "./Seat";
+import Stand from "./Stand";
+
+const Cube = styled.div`
+  position: absolute;
+  left: ${vres(7)};
+  top: ${vres(9)};
+  width: ${vres(3)};
+  height: ${vres(6)};
+
+  transform: translateZ(${vres(4.25)}) rotateZ(-5deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 160%;
+    height: 80%;
+    background-color: rgba(${black3}, 0.85);
+    filter: blur(${vres(0.75)});
+    transform: translateZ(${vres(-3.75)});
+  }
+`;
 
 const Chair = ({ currentIndex }) => {
-  if([2, 3, 4, 5, 9, 10].indexOf(currentIndex) >= 0) {
+  if ([2, 3, 4, 5, 9, 10].indexOf(currentIndex) >= 0) {
     return null;
   }
-  return (<>
-    <div className="chair">
-      <div className="seat">
-        <div className="seat__front face"> </div>
-        <div className="seat__back face"> </div>
-        <div className="seat__right face"> </div>
-        <div className="seat__left face"> </div>
-        <div className="seat__top face"> </div>
-        <div className="seat__bottom face"> </div>
-      </div>
-      <div className="backrest">
-        <div className="backrest__front face"> </div>
-        <div className="backrest__back face"> </div>
-        <div className="backrest__right face"> </div>
-        <div className="backrest__left face"> </div>
-        <div className="backrest__top face"> </div>
-        <div className="backrest__bottom face"> </div>
-      </div>
-      <div className="left-armrest">
-        <div className="left-armrest__front face"> </div>
-        <div className="left-armrest__back face"> </div>
-        <div className="left-armrest__right face"> </div>
-        <div className="left-armrest__left face"> </div>
-        <div className="left-armrest__top face"> </div>
-        <div className="left-armrest__bottom face"> </div>
-      </div>
-      <div className="right-armrest">
-        <div className="right-armrest__front face"> </div>
-        <div className="right-armrest__back face"> </div>
-        <div className="right-armrest__right face"> </div>
-        <div className="right-armrest__left face"> </div>
-        <div className="right-armrest__top face"> </div>
-        <div className="right-armrest__bottom face"> </div>
-      </div>
-      <div className="stand">
-        <div className="stand__front face"> </div>
-        <div className="stand__back face"> </div>
-        <div className="stand__right face"> </div>
-        <div className="stand__left face"> </div>
-        <div className="stand__top face"> </div>
-        <div className="stand__bottom face"> </div>
-      </div>
-      <div className="pedestal-1">
-        <div className="pedestal-1__front face"> </div>
-        <div className="pedestal-1__back face"> </div>
-        <div className="pedestal-1__right face"> </div>
-        <div className="pedestal-1__left face"> </div>
-        <div className="pedestal-1__top face"> </div>
-        <div className="pedestal-1__bottom face"> </div>
-      </div>
-      <div className="pedestal-2">
-        <div className="pedestal-2__front face"> </div>
-        <div className="pedestal-2__back face"> </div>
-        <div className="pedestal-2__right face"> </div>
-        <div className="pedestal-2__left face"> </div>
-        <div className="pedestal-2__top face"> </div>
-        <div className="pedestal-2__bottom face"> </div>
-      </div>
-    </div>
-</>);
+  return <Cube>
+    <Seat />
+    <Armrest left={true}/>
+    <Armrest />
+    <Backrest />
+    <Pedestal left={true} />
+    <Pedestal />
+    <Stand />
+  </Cube>;
 };
 
 export default Chair;

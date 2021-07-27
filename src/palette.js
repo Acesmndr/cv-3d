@@ -11,6 +11,7 @@ export const white4 = "#666568";
 export const black1 = "#393a1c";
 export const black2 = "#17180b";
 export const black3 = "#060703";
+export const black4 = "#030303";
 
 export const neon1 = "#faf8f0";
 export const neon2 = "#eeeeee";
