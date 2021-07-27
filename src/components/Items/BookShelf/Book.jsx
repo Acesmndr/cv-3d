@@ -105,7 +105,6 @@ const coloredStyle = (color, styles) => `
 `
 
 const Book = ({ left, transform, image, color, id }) => {
-  console.log(left, transform);
   return(
   <Cube key={id} left={left} transform={transform}>
     <FrontFace {...CubeProps} styles={coloredImageStyle(image, color, style.front)} />

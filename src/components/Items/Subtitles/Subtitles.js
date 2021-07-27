@@ -37,7 +37,6 @@ const SUBTITLES = [
   "I'd be happy to get to know you.",
 ];
 const Subtitles = ({ currentIndex, isSafari }) => {
-  console.log(isSafari, 'hello');
   if (!SUBTITLES[currentIndex]) {
     return null;
   }

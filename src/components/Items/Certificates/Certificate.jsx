@@ -70,7 +70,6 @@ const imageStyle = (image, styles) => css`
 `;
 
 const Certificate = ({image, fromLeft}) => {
-  console.log(image);
   return (
   <Cube left={fromLeft}>
     <FrontFace {...CubeProps} styles={imageStyle(image, style.front)} />
