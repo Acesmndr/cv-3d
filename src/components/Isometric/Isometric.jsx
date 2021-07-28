@@ -146,10 +146,10 @@ const Isometric = ({ isSafari }) => {
           <Window />
           <Photos />
           <StudyTable />
-          <Laptop currentIndex={props.count} />
+          <Laptop currentIndex={keyCount} />
           <Tablet />
           <IdentityCard />
-          <Chair currentIndex={props.count} />
+          <Chair currentIndex={keyCount} />
         </Room>
       </animated.div>
       <Subtitles currentIndex={keyCount} isSafari={isSafari} />
