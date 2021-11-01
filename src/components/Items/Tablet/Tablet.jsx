@@ -40,12 +40,6 @@ const style = {
     background-image: url(${TabletImage});
     background-size: cover;
     cursor: pointer;
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-    }
   `,
   bottom: css`
     background-color: black;
@@ -69,14 +63,9 @@ const Tablet = () => (
     <BackFace {...CubeProps} styles={style.back} />
     <RightFace {...CubeProps} styles={style.right} />
     <LeftFace {...CubeProps} styles={style.left} />
-    <TopFace {...CubeProps} styles={style.top}>
-      <a
-        href="https://medium.com/@acesmndr"
-        referrerPolicy="no-referrer no-follow"
-      >
-        Medium
-      </a>
-    </TopFace>
+    <TopFace {...CubeProps} styles={style.top}  onClick={() => {
+      window.open("https://medium.com/@acesmndr", "_blank")
+    }} />
     <BottomFace {...CubeProps} styles={style.bottom} />
   </Cube>
 );

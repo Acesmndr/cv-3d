@@ -79,12 +79,10 @@ const Floor = () => (
     <RightFace {...CubeProps} styles={style.right} />
     <LeftFace {...CubeProps} styles={style.left} />
     <TopFace {...CubeProps} styles={style.top} />
-    <a
-      href="https://www.linkedin.com/in/acesmndr/"
-      referrerPolicy="no-referrer no-follow"
-    >
-      <BottomFace {...CubeProps} styles={style.bottom} />
-    </a>
+    <BottomFace {...CubeProps} styles={style.bottom} onClick={() => {
+      window.open("https://www.linkedin.com/in/acesmndr/", "_blank")
+    }}>
+    </BottomFace>
   </Cube>
 );
 

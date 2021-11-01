@@ -71,7 +71,9 @@ const imageStyle = (isDribbble, styles) => css`
 
 const LaptopScreen = ({ isDribbble }) => (
   <Cube>
-    <FrontFace {...CubeProps} styles={imageStyle(isDribbble, style.front)} />
+    <FrontFace {...CubeProps} styles={imageStyle(isDribbble, style.front)} onClick={() => {
+      isDribbble && window.open("https://dribbble.com/acesmndr", "_blank")
+    }} />
     <BackFace {...CubeProps} styles={style.back} />
     <RightFace {...CubeProps} styles={style.right} />
     <LeftFace {...CubeProps} styles={style.left} />
