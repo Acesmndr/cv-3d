@@ -15,26 +15,39 @@ import {
 } from "../../Isometric/Cube";
 
 const style = {
-  front: css`background-color: black;
-  border: ${vres(0.125)} solid ${black3};
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    filter: drop-shadow(0px 0px 1px #212121);
-  }`,
-  back: css`display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${black3};`,
-  right: css`background-color: ${black3};`,
-  left: css`background-color: ${black3};`,
-  top: css`background-color: ${black3};`,
-  bottom: css`background-color: ${black3};`,
+  front: css`
+    background-color: black;
+    background-size: cover;
+    border: ${vres(0.125)} solid ${black3};
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      filter: drop-shadow(0px 0px 1px #212121);
+    }
+  `,
+  back: css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${black3};
+  `,
+  right: css`
+    background-color: ${black3};
+  `,
+  left: css`
+    background-color: ${black3};
+  `,
+  top: css`
+    background-color: ${black3};
+  `,
+  bottom: css`
+    background-color: ${black3};
+  `,
 };
 const CubeProps = cprops(8, 5, 0.25);
 
@@ -49,10 +62,8 @@ const Cube = styled.div`
 
 const frontStyle = (currentIndex, styles) => css`
   ${styles}
-  &::before {
-    background-image: url(${currentIndex > 7 ? ProjectsImage : HiImage});
-  }
-`
+  background-image: url(${currentIndex > 7 ? ProjectsImage : HiImage});
+`;
 
 const Monitor = ({ currentIndex }) => (
   <Cube>

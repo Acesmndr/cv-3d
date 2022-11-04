@@ -15,15 +15,9 @@ import {
 
 const style = {
   front: css`
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
-    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     border: ${vres(0.075)} solid black;
     a {
       opacity: 0;
@@ -63,10 +57,8 @@ const Cube = styled.div`
 
 const imageStyle = (isDribbble, styles) => css`
   ${styles}
-  &::before {
-    cursor: ${isDribbble ? "pointer" : "default"};
-    background-image: url("${isDribbble ? DribbbleDesigns : CodeGif}");
-  }
+  cursor: ${isDribbble ? "pointer" : "default"};
+  background-image: url("${isDribbble ? DribbbleDesigns : CodeGif}");
 `;
 
 const LaptopScreen = ({ isDribbble }) => (
