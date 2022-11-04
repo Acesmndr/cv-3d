@@ -14,13 +14,13 @@ const Cube = styled.div`
   transform: translateZ(${vres(8.5)});
 `;
 
-const Window = () => (
+const Window = ({ currentIndex }) => (
   <Cube>
     <HorizontalFrame left={true} />
     <HorizontalFrame />
     <VerticalFrame />
     <VerticalFrame top={true} />
-    <WindowPanel />
+    <WindowPanel currentIndex={currentIndex} />
   </Cube>
 );
 
