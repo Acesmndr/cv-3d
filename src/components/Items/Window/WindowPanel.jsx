@@ -2,6 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
 import Kathmandu from "../../../images/kathmandu.jpg";
+import Berlin from "../../../images/berlin.jpg";
 
 import {
   BackFace,
@@ -16,7 +17,6 @@ const style = {
   front: css``,
   back: css``,
   right: css`
-    background-image: url(${Kathmandu});
     background-size: cover;
     background-color: black;
     
@@ -34,6 +34,11 @@ const style = {
   bottom: css``,
 };
 
+const imageStyle = (hasTravelled, styles) => css`
+  ${styles}
+  background-image: url("${hasTravelled ? Berlin : Kathmandu}");
+`;
+
 const CubeProps = cprops(0.125, 8, 2.5);
 
 const Cube = styled.div`
@@ -44,11 +49,11 @@ const Cube = styled.div`
   height: ${vres(8)};
 `;
 
-const WindowPanel = () => (
+const WindowPanel = ({ currentIndex }) => (
   <Cube>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
-    <RightFace {...CubeProps} styles={style.right} />
+    <RightFace {...CubeProps} styles={imageStyle(currentIndex > 6, style.right)} />
     <LeftFace {...CubeProps} styles={style.left} />
     <TopFace {...CubeProps} styles={style.top} />
     <BottomFace {...CubeProps} styles={style.bottom} />
