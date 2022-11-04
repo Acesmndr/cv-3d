@@ -27,7 +27,7 @@ const Keys = ({ incrementKeyCount, decrementKeyCount, keyCount }) => {
   return (
     <>
       {keyCount !== 0 && <KeyLeft onClick={decrementKeyCount}>&larr;</KeyLeft>}
-      {keyCount <= 14 && (
+      {keyCount <= 16 && (
         <KeyRight onClick={incrementKeyCount}>&rarr;</KeyRight>
       )}
     </>

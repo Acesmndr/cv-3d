@@ -2,6 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
 import IDCard from "../../../images/idcard.jpg";
+import IDCard2 from "../../../images/idcard2.jpeg";
 import {
   white3,
   white2,
@@ -29,13 +30,18 @@ const style = {
   left: css`
     background-color: ${white2};
   `,
-  top: css`background-image: url(${IDCard});
+  top: css`
   background-size: cover;
 }`,
   bottom: css`
     background-color: ${white3};
   `,
 };
+
+const imageStyle = (hasTravelled, styles) => css`
+  ${styles}
+  background-image: url("${hasTravelled ? IDCard2 : IDCard}");
+`;
 
 const CubeProps = cprops(0.68, 0.012, 0.522);
 
@@ -48,13 +54,13 @@ const Cube = styled.div`
   transform: translateZ(${vres(7.05)}) rotateZ(-25deg);
 `;
 
-const IdentityCard = () => (
+const IdentityCard = ({ currentIndex }) => (
   <Cube>
     <FrontFace {...CubeProps} styles={style.front} />
     <BackFace {...CubeProps} styles={style.back} />
     <RightFace {...CubeProps} styles={style.right} />
     <LeftFace {...CubeProps} styles={style.left} />
-    <TopFace {...CubeProps} styles={style.top} />
+    <TopFace {...CubeProps} styles={imageStyle(currentIndex > 7, style.top)} />
     <BottomFace {...CubeProps} styles={style.bottom} />
   </Cube>
 );
