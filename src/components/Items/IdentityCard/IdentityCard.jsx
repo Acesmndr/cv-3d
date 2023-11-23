@@ -2,7 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import { cprops, vres } from "../../../mixin";
 import IDCard from "../../../images/idcard.jpg";
-import IDCard2 from "../../../images/idcard2.jpeg";
+import IDCard3 from "../../../images/idcard3.jpeg";
 import {
   white3,
   white2,
@@ -40,7 +40,7 @@ const style = {
 
 const imageStyle = (hasTravelled, styles) => css`
   ${styles}
-  background-image: url("${hasTravelled ? IDCard2 : IDCard}");
+  background-image: url("${hasTravelled ? IDCard3 : IDCard}");
 `;
 
 const CubeProps = cprops(0.68, 0.012, 0.522);

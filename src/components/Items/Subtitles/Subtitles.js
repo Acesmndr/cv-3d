@@ -28,7 +28,7 @@ const SUBTITLES = [
   "I'm from Kathmandu, the city of temples",
   "and after learning and growing at CloudFactory for 6 years...",
   "I relocated to Berlin to face new challenges",
-  "and am currently working in Elinvar",
+  "I am currently working at Engel & Völkers in Hamburg",
   "Along the way I have gathered a lot of skills to my arsenal.",
   "I'm good at things but I can't say that I have mastered anything just yet.",
   "Still, I do love crafting new things",
